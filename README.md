@@ -1,6 +1,6 @@
-# 🚀 Roadmap Cloud Engineer (My Learning Journey)
+# Roadmap Cloud Engineer (My Learning Journey)
 
-Selamat datang di repositori **Roadmap Cloud Engineer**! ☁️✨
+Selamat datang di repositori **Roadmap Cloud Engineer**! ☁️
 
 Repositori ini adalah catatan perjalanan belajar pribadi saya dalam mendalami dunia *Cloud Engineering*. Di sini, saya akan mendokumentasikan roadmap komprehensif, mulai dari dasar-dasar komputasi awan hingga persiapan sertifikasi tingkat lanjut (Google Cloud, AWS, Azure).
 
@@ -14,4 +14,4 @@ Anda bisa melihat versi live interaktif dari roadmap saya di sini:
 - **Multi-Cloud:** Meskipun fokus awal mungkin ada di GCP, struktur ini disiapkan untuk multi-cloud.
 
 ---
-*Mulai dari titik kecil, kumpulkan satu per satu log dan mari membangun ke angkasa.* 🚀
+*Mulai dari titik kecil, kumpulkan satu per satu log dan mari membangun ke angkasa.* 
