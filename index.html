@@ -1689,6 +1689,7 @@
         display: none !important;
       }
     }
+
     /* ===== PROGRESS & CHECKBOX ===== */
     .progress-box {
       margin-bottom: 24px;
@@ -1698,6 +1699,7 @@
       border-radius: 12px;
       width: 100%;
     }
+
     .progress-info {
       display: flex;
       justify-content: space-between;
@@ -1706,10 +1708,12 @@
       margin-bottom: 8px;
       color: var(--muted);
     }
+
     .progress-percentage {
       color: var(--white);
       font-weight: 700;
     }
+
     .progress-bar-bg {
       width: 100%;
       height: 6px;
@@ -1717,6 +1721,7 @@
       border-radius: 10px;
       overflow: hidden;
     }
+
     .progress-bar-fill {
       height: 100%;
       width: 0%;
@@ -1724,12 +1729,29 @@
       transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    #section-google .progress-bar-fill { background: var(--google-blue); }
-    #section-aws .progress-bar-fill { background: var(--aws-orange); }
-    #section-azure .progress-bar-fill { background: var(--azure-blue); }
-    #section-k8s .progress-bar-fill { background: var(--kubernetes-blue); }
-    #section-multi .progress-bar-fill { background: #a78bfa; }
-    #section-praktik .progress-bar-fill { background: #f472b6; }
+    #section-google .progress-bar-fill {
+      background: var(--google-blue);
+    }
+
+    #section-aws .progress-bar-fill {
+      background: var(--aws-orange);
+    }
+
+    #section-azure .progress-bar-fill {
+      background: var(--azure-blue);
+    }
+
+    #section-k8s .progress-bar-fill {
+      background: var(--kubernetes-blue);
+    }
+
+    #section-multi .progress-bar-fill {
+      background: #a78bfa;
+    }
+
+    #section-praktik .progress-bar-fill {
+      background: #f472b6;
+    }
 
     /* Custom Checkbox */
     .custom-checkbox {
@@ -1745,7 +1767,7 @@
       transition: all 0.2s ease;
       background: rgba(0, 0, 0, 0.2);
     }
-    
+
     .course-item {
       display: flex;
       align-items: flex-start;
@@ -1757,8 +1779,10 @@
       align-items: flex-start;
       gap: 10px;
     }
+
     .praktik-list li.task-has-checkbox::before {
-      display: none; /* Hide the > arrow, replaced by checkbox */
+      display: none;
+      /* Hide the > arrow, replaced by checkbox */
     }
 
     .custom-checkbox:hover {
@@ -1777,11 +1801,11 @@
     }
 
     /* Platform Checkbox Colors */
-    .completed .custom-checkbox { 
-      background: var(--google-green) !important; 
-      border-color: var(--google-green) !important; 
+    .completed .custom-checkbox {
+      background: var(--google-green) !important;
+      border-color: var(--google-green) !important;
     }
-    
+
     /* Global Toast */
     #progress-toast {
       position: fixed;
@@ -1804,6 +1828,7 @@
       gap: 8px;
       pointer-events: none;
     }
+
     #progress-toast.show {
       transform: translateX(-50%) translateY(0);
     }
@@ -1815,7 +1840,7 @@
 
     <!-- HEADER -->
     <div class="header">
-      <div class="top-tag">Codecademy · Cloud Engineer Path · 2026</div>
+      <div class="top-tag">Cloud Engineer Path</div>
       <h1>Complete Cloud<br>Engineer Roadmap</h1>
       <p class="sub">semua platform · urut dari dasar sampai sertifikasi · data dari codecademy.com</p>
     </div>
@@ -3638,7 +3663,7 @@
         });
 
         const items = section.querySelectorAll('.course-item, .praktik-list li, .milestone-step');
-        
+
         items.forEach((item, index) => {
           const platformId = section.id || 'general';
           const taskId = `${platformId}-task-${index}`;
@@ -3648,7 +3673,7 @@
           const chk = document.createElement('div');
           chk.className = 'custom-checkbox';
           chk.innerHTML = '<span class="chk-icon">✓</span>';
-          
+
           item.insertBefore(chk, item.firstChild);
 
           if (localStorage.getItem(taskId) === 'true') {
@@ -3667,7 +3692,7 @@
             updateProgress(section);
           });
         });
-        
+
         updateProgress(section);
       });
 
@@ -3676,10 +3701,10 @@
         if (items.length === 0) return;
         const completed = section.querySelectorAll('.task-has-checkbox.completed').length;
         const percentage = Math.round((completed / items.length) * 100);
-        
+
         const fill = section.querySelector('.progress-bar-fill');
         const text = section.querySelector('.progress-percentage');
-        
+
         if (fill) fill.style.width = percentage + '%';
         if (text) text.innerText = percentage + '%';
       }
