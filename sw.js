@@ -1,10 +1,12 @@
-const CACHE_NAME = 'roadmap-cloud-engineer-v2';
+const CACHE_NAME = 'roadmap-cloud-engineer-v3';
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
   '/sw.js',
   '/public/favicon.ico',
+  '/public/icon-192.png',
+  '/public/icon-512.png',
   'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Clash+Display:wght@400;600;700;800&display=swap'
 ];
 
