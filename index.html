@@ -1690,10 +1690,12 @@
       }
     }
     /* ===== PROGRESS & CHECKBOX ===== */
-    .progress-container {
-      margin-top: 16px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    .progress-box {
+      margin-bottom: 24px;
+      padding: 16px 24px;
+      background: linear-gradient(145deg, rgba(20, 20, 20, 0.4), rgba(15, 15, 15, 0.2));
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
       width: 100%;
     }
     .progress-info {
@@ -3614,7 +3616,7 @@
         if (!header) return;
 
         const progressContainer = document.createElement('div');
-        progressContainer.className = 'progress-container';
+        progressContainer.className = 'progress-box';
         progressContainer.innerHTML = `
           <div class="progress-info">
              <span class="progress-label">Progress Pembelajaran</span>
@@ -3624,7 +3626,16 @@
              <div class="progress-bar-fill"></div>
           </div>
         `;
-        header.appendChild(progressContainer);
+        header.insertAdjacentElement('afterend', progressContainer);
+
+        const phases = section.querySelectorAll('.phase-block');
+        phases.forEach((phase, idx) => {
+          if (idx === 0) {
+            phase.classList.add('open');
+          } else {
+            phase.classList.remove('open');
+          }
+        });
 
         const items = section.querySelectorAll('.course-item, .praktik-list li, .milestone-step');
         
