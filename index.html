@@ -3,15 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Complete Cloud Engineer Roadmap — Codecademy</title>
+<title>Cloud Engineer Roadmap — My Learning Journey</title>
+<link rel="icon" type="image/webp" href="public/logo.webp">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<link rel="apple-touch-icon" href="public/logo.webp">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Clash+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #07090f;
-  --surface: #0d1117;
-  --card: #111820;
-  --border: #1c2535;
-  --border2: #243044;
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --card: #0a0a0a;
+  --border: #1a1a1a;
+  --border2: #262626;
 
   --google-blue: #4285F4;
   --google-red: #EA4335;
@@ -48,26 +52,10 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 28px 28px;
   pointer-events: none;
   z-index: 0;
-}
-
-body::after {
-  content: '';
-  position: fixed;
-  top: -20vh; left: 0;
-  width: 100vw; height: 100vh;
-  background: radial-gradient(circle at 50% 0%, rgba(66, 133, 244, 0.15), transparent 60%);
-  pointer-events: none;
-  z-index: -1;
-  animation: pulseGlow 8s ease-in-out infinite alternate;
-}
-
-@keyframes pulseGlow {
-  0% { opacity: 0.7; }
-  100% { opacity: 1; transform: scale(1.05); }
 }
 
 .page {
@@ -164,11 +152,11 @@ h1 {
   gap: 16px;
   margin-bottom: 32px;
   padding: 24px;
-  background: linear-gradient(145deg, rgba(17, 24, 32, 0.8), rgba(17, 24, 32, 0.4));
+  background: linear-gradient(145deg, rgba(15, 15, 15, 0.9), rgba(10, 10, 10, 0.4));
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
 
 .platform-icon {
@@ -206,10 +194,10 @@ h1 {
 /* ===== PHASE BLOCKS ===== */
 .phase-block {
   margin-bottom: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(17, 24, 32, 0.4);
+  background: rgba(15, 15, 15, 0.4);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
@@ -1489,6 +1477,17 @@ function togglePhase(head) {
   const block = head.parentElement;
   block.classList.toggle('open');
 }
+</script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').then(registration => {
+        console.log('ServiceWorker registration successful');
+      }).catch(err => {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
 </script>
 </body>
 </html>
