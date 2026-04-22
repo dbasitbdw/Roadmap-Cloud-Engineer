@@ -704,6 +704,150 @@ h1 {
   transition: color 0.2s;
 }
 #pwa-dismiss-btn:hover { color: var(--white); }
+
+/* =============================================
+   MOBILE RESPONSIVE — comprehensive overhaul
+   ============================================= */
+
+/* === SCROLLABLE TABS (mobile) === */
+@media (max-width: 640px) {
+  .page {
+    padding: 36px 16px 100px;
+  }
+
+  /* Header */
+  .header { margin-bottom: 32px; }
+  h1 { font-size: clamp(1.8rem, 8vw, 2.8rem); }
+  .sub { font-size: 0.72rem; }
+  .top-tag { font-size: 9px; padding: 4px 10px; }
+
+  /* Tabs — horizontal scroll, no wrap */
+  .tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    margin-bottom: 24px;
+    gap: 6px;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    padding: 8px 14px;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0.04em;
+  }
+
+  /* Platform header — compact on mobile */
+  .platform-header {
+    padding: 16px;
+    gap: 12px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .platform-icon { width: 40px; height: 40px; font-size: 1.2rem; }
+  .platform-info h2 { font-size: 1.1rem; }
+  .platform-info p { font-size: 0.65rem; }
+  .platform-stats { gap: 14px; }
+  .pstat-num { font-size: 1rem; }
+  .pstat-label { font-size: 0.58rem; }
+
+  /* Phase blocks */
+  .phase-block { border-radius: 10px; margin-bottom: 10px; }
+  .phase-head { padding: 13px 14px; gap: 10px; }
+  .phase-head-title { font-size: 0.82rem; }
+  .phase-head-meta { font-size: 0.62rem; }
+  .phase-tag { display: none; } /* hide on mobile, save space */
+  .phase-num-badge { width: 26px; height: 26px; font-size: 0.65rem; }
+  .toggle-arrow { font-size: 0.72rem; }
+  .phase-body { padding: 0 14px 14px; }
+
+  /* Course items — cleaner mobile layout */
+  .course-item {
+    padding: 12px 12px;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    margin-top: 8px;
+  }
+  .course-item:hover { transform: none; } /* no translateX on touch */
+  .course-order { width: 20px; height: 20px; font-size: 0.58rem; }
+  .course-name { font-size: 0.78rem; }
+  .course-desc { font-size: 0.67rem; }
+  .course-dur {
+    font-size: 0.62rem;
+    background: rgba(255,255,255,0.04);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-top: 0;
+    width: 100%;
+    text-align: right;
+  }
+  .cbadge { font-size: 0.55rem; padding: 1px 6px; }
+  .course-badges { gap: 4px; margin-top: 5px; }
+
+  /* Tip box */
+  .tip-box { padding: 9px 11px; border-radius: 0 8px 8px 0; }
+  .tip-box p { font-size: 0.68rem; line-height: 1.6; }
+
+  /* Summary */
+  .summary { padding: 20px 16px; border-radius: 10px; margin-top: 32px; }
+  .summary h3 { font-size: 0.8rem; margin-bottom: 14px; }
+  .flow { gap: 6px; }
+  .flow-step { font-size: 0.65rem; padding: 6px 10px; }
+  .flow-arrow { font-size: 0.8rem; }
+  .note { font-size: 0.64rem; line-height: 1.7; }
+
+  /* Praktik section */
+  .praktik-intro { padding: 16px; border-radius: 12px; margin-bottom: 20px; }
+  .praktik-intro h2 { font-size: 1rem; }
+  .praktik-intro p { font-size: 0.72rem; }
+  .praktik-grid { grid-template-columns: 1fr; gap: 10px; }
+  .praktik-card { padding: 16px; border-radius: 12px; }
+  .praktik-card:hover { transform: none; }
+  .praktik-card-title { font-size: 0.82rem; }
+  .praktik-list li { font-size: 0.68rem; padding: 5px 0; }
+  .praktik-milestone { padding: 16px; border-radius: 12px; margin-top: 20px; }
+  .milestone-step { padding: 10px 12px; gap: 10px; }
+  .ms-title { font-size: 0.78rem; }
+  .ms-desc { font-size: 0.66rem; }
+
+  /* PWA Banner on mobile */
+  #pwa-banner { width: calc(100% - 24px); padding: 12px 14px; gap: 10px; border-radius: 14px; }
+  #pwa-banner-icon { width: 40px; height: 40px; border-radius: 10px; }
+  #pwa-banner-title { font-size: 0.8rem; }
+  #pwa-banner-sub { font-size: 0.63rem; }
+  #pwa-install-btn { padding: 7px 13px; font-size: 0.7rem; }
+}
+
+/* === TABLET adjustments === */
+@media (min-width: 641px) and (max-width: 900px) {
+  .page { padding: 48px 20px 80px; }
+  .tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; justify-content: flex-start; padding-bottom: 4px; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { white-space: nowrap; flex-shrink: 0; }
+  .platform-header { padding: 18px; }
+  .platform-info h2 { font-size: 1.2rem; }
+  .praktik-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* === TOUCH: remove translateX hover on touch devices === */
+@media (hover: none) {
+  .course-item:hover { transform: none; background: rgba(255,255,255,0.015); border-color: rgba(255,255,255,0.04); }
+  .praktik-card:hover { transform: none; background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.06); box-shadow: none; }
+  .phase-block:hover { border-color: rgba(255,255,255,0.04); box-shadow: none; }
+  .tab:hover { transform: none; }
+}
+
+/* === Safe area for notch/home bar === */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .page { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  #pwa-banner.show { bottom: calc(16px + env(safe-area-inset-bottom)); }
+}
 </style>
 </head>
 <body>
