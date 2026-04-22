@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Cloud Engineer Roadmap — Codecademy</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Clash+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #07090f;
+  --surface: #0d1117;
+  --card: #111820;
+  --border: #1c2535;
+  --border2: #243044;
+
+  --google-blue: #4285F4;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC05;
+  --google-green: #34A853;
+
+  --aws-orange: #FF9900;
+  --aws-dark: #232F3E;
+
+  --azure-blue: #0078D4;
+  --azure-light: #50E6FF;
+
+  --kubernetes-blue: #326CE5;
+  --comptia-red: #C8202F;
+  --oracle-red: #F80000;
+  --white: #f0f4ff;
+  --muted: #5a6a8a;
+  --mono: 'IBM Plex Mono', monospace;
+  --display: 'Clash Display', 'Syne', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--mono);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Dot grid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+  animation: fadeDown 0.8s ease both;
+}
+
+.top-tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border2);
+  padding: 5px 14px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  font-family: var(--mono);
+}
+
+h1 {
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 14px;
+}
+
+.sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* ===== PLATFORM TABS ===== */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 0.6s 0.15s ease both;
+}
+
+.tab {
+  padding: 8px 18px;
+  border-radius: 4px;
+  border: 1px solid var(--border2);
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab:hover { border-color: var(--border2); color: var(--white); background: var(--card); }
+.tab.active { color: var(--white); border-color: currentColor; }
+
+.tab-google.active { color: var(--google-blue); background: rgba(66,133,244,0.08); }
+.tab-aws.active { color: var(--aws-orange); background: rgba(255,153,0,0.08); }
+.tab-azure.active { color: var(--azure-blue); background: rgba(0,120,212,0.08); }
+.tab-k8s.active { color: var(--kubernetes-blue); background: rgba(50,108,229,0.08); }
+.tab-multi.active { color: #a78bfa; background: rgba(167,139,250,0.08); }
+
+/* ===== PLATFORM SECTIONS ===== */
+.platform-section { display: none; animation: fadeUp 0.4s ease both; }
+.platform-section.active { display: block; }
+
+/* ===== PLATFORM HEADER ===== */
+.platform-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding: 20px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.platform-icon {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.platform-info h2 {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.platform-info p {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.platform-stats {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.pstat { text-align: right; }
+.pstat-num { font-size: 1.2rem; font-weight: 700; }
+.pstat-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ===== PHASE BLOCKS ===== */
+.phase-block {
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.phase-block:hover { border-color: var(--border2); }
+
+.phase-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: var(--card);
+  cursor: pointer;
+  user-select: none;
+}
+
+.phase-num-badge {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.phase-head-info { flex: 1; }
+
+.phase-head-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: var(--display);
+  letter-spacing: -0.01em;
+}
+
+.phase-head-meta {
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.phase-tag {
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 3px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.tag-free { background: rgba(52,168,83,0.12); color: #34A853; border: 1px solid rgba(52,168,83,0.2); }
+.tag-paid { background: rgba(251,188,5,0.12); color: #FBBC05; border: 1px solid rgba(251,188,5,0.2); }
+.tag-cert { background: rgba(167,139,250,0.12); color: #a78bfa; border: 1px solid rgba(167,139,250,0.2); }
+.tag-optional { background: rgba(90,106,138,0.12); color: var(--muted); border: 1px solid var(--border2); }
+
+.toggle-arrow {
+  color: var(--muted);
+  transition: transform 0.3s;
+  font-size: 0.8rem;
+}
+
+.phase-block.open .toggle-arrow { transform: rotate(180deg); }
+
+.phase-body {
+  display: none;
+  padding: 0 20px 16px;
+  background: rgba(0,0,0,0.2);
+}
+
+.phase-block.open .phase-body { display: block; }
+
+/* ===== COURSE ITEMS ===== */
+.course-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.course-item:hover {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+
+.course-order {
+  width: 22px; height: 22px;
+  border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+}
+
+.course-details { flex: 1; min-width: 0; }
+
+.course-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--display);
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.course-desc {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 3px;
+  line-height: 1.5;
+}
+
+.course-badges {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.cbadge {
+  font-size: 0.6rem;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.05em;
+}
+
+.cbadge-level { background: rgba(255,255,255,0.06); color: var(--muted); }
+.cbadge-free { background: rgba(52,168,83,0.1); color: #34A853; }
+.cbadge-path { background: rgba(66,133,244,0.1); color: #4285F4; }
+.cbadge-cert { background: rgba(167,139,250,0.1); color: #a78bfa; }
+
+.course-dur {
+  font-size: 0.68rem;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ===== TIP BOX ===== */
+.tip-box {
+  display: flex;
+  gap: 10px;
+  padding: 10px 13px;
+  background: rgba(255,255,255,0.02);
+  border-left: 2px solid var(--border2);
+  border-radius: 0 6px 6px 0;
+  margin-top: 12px;
+}
+
+.tip-box p { font-size: 0.72rem; color: #7a8aaa; line-height: 1.7; }
+.tip-box p strong { color: var(--white); }
+
+/* ===== COLORS PER PLATFORM ===== */
+/* Google */
+.google .phase-num-badge { background: rgba(66,133,244,0.15); color: var(--google-blue); }
+.google .platform-icon { background: rgba(66,133,244,0.1); }
+.google .platform-info h2 { color: var(--google-blue); }
+.google .pstat-num { color: var(--google-blue); }
+
+/* AWS */
+.aws .phase-num-badge { background: rgba(255,153,0,0.15); color: var(--aws-orange); }
+.aws .platform-icon { background: rgba(255,153,0,0.1); }
+.aws .platform-info h2 { color: var(--aws-orange); }
+.aws .pstat-num { color: var(--aws-orange); }
+
+/* Azure */
+.azure .phase-num-badge { background: rgba(0,120,212,0.15); color: var(--azure-blue); }
+.azure .platform-icon { background: rgba(0,120,212,0.1); }
+.azure .platform-info h2 { color: var(--azure-blue); }
+.azure .pstat-num { color: var(--azure-blue); }
+
+/* Kubernetes */
+.k8s .phase-num-badge { background: rgba(50,108,229,0.15); color: var(--kubernetes-blue); }
+.k8s .platform-icon { background: rgba(50,108,229,0.1); }
+.k8s .platform-info h2 { color: var(--kubernetes-blue); }
+.k8s .pstat-num { color: var(--kubernetes-blue); }
+
+/* Multi */
+.multi .phase-num-badge { background: rgba(167,139,250,0.15); color: #a78bfa; }
+.multi .platform-icon { background: rgba(167,139,250,0.1); }
+.multi .platform-info h2 { color: #a78bfa; }
+.multi .pstat-num { color: #a78bfa; }
+
+/* ===== BOTTOM SUMMARY ===== */
+.summary {
+  margin-top: 48px;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.summary h3 {
+  font-family: var(--display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-step {
+  padding: 8px 16px;
+  border: 1px solid var(--border2);
+  border-radius: 5px;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--white);
+}
+
+.flow-arrow { color: var(--muted); font-size: 0.9rem; }
+
+.note {
+  margin-top: 18px;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+@keyframes fadeDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="top-tag">Codecademy · Cloud Engineer Path · 2026</div>
+    <h1>Complete Cloud<br>Engineer Roadmap</h1>
+    <p class="sub">semua platform · urut dari dasar sampai sertifikasi · data dari codecademy.com</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab tab-google active" onclick="switchTab('google')">☁️ Google Cloud</button>
+    <button class="tab tab-aws" onclick="switchTab('aws')">🟠 AWS</button>
+    <button class="tab tab-azure" onclick="switchTab('azure')">🔵 Microsoft Azure</button>
+    <button class="tab tab-k8s" onclick="switchTab('k8s')">⚙️ Kubernetes</button>
+    <button class="tab tab-multi" onclick="switchTab('multi')">🌐 Multi-Cloud & Lainnya</button>
+  </div>
+
+  <!-- ======================== GOOGLE ======================== -->
+  <div class="platform-section google active" id="section-google">
+    <div class="platform-header">
+      <div class="platform-icon">☁️</div>
+      <div class="platform-info">
+        <h2>Google Cloud Platform (GCP)</h2>
+        <p>Mulai dari sini · paling direkomendasikan untuk pemula cloud engineer</p>
+      </div>
+      <div class="platform-stats">
+        <div class="pstat"><div class="pstat-num">5</div><div class="pstat-label">Fase</div></div>
+        <div class="pstat"><div class="pstat-num">~80jam</div><div class="pstat-label">Total</div></div>
+      </div>
+    </div>
+
+    <!-- Fase 1 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">01</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Fondasi Wajib</div>
+          <div class="phase-head-meta">Minggu 1–2 · Jangan diskip ini!</div>
+        </div>
+        <span class="phase-tag tag-free">GRATIS</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details">
+            <div class="course-name">Intro to Cloud Computing</div>
+            <div class="course-desc">Konsep dasar cloud computing — AWS, Azure, GCP overview. Mulai banget dari sini.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span><span class="cbadge cbadge-cert">With Certificate</span></div>
+          </div>
+          <div class="course-dur">&lt;1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">2</div>
+          <div class="course-details">
+            <div class="course-name">Learn Python 3</div>
+            <div class="course-desc">Bahasa wajib untuk automation & scripting di cloud. Hampir semua cloud engineer pakai Python.</div>
+            <div class="course-badges"><span class="cbadge cbadge-level">Beginner</span><span class="cbadge cbadge-cert">With Certificate</span></div>
+          </div>
+          <div class="course-dur">24 jam</div>
+        </div>
+        <div class="tip-box"><p>💡 <strong>Kenapa Python dulu?</strong> Hampir semua automation, scripting, dan CI/CD di GCP pakai Python. Tanpa ini, nanti susah di fase lanjut.</p></div>
+      </div>
+    </div>
+
+    <!-- Fase 2 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">02</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Google Associate Cloud Engineer — Path Utama</div>
+          <div class="phase-head-meta">Minggu 3–5 · Ambil path ini, otomatis dapat semua modul di bawah</div>
+        </div>
+        <span class="phase-tag tag-free">GRATIS</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">3</div>
+          <div class="course-details">
+            <div class="course-name">Google Associate Cloud Engineer (Path Utama)</div>
+            <div class="course-desc">Certification path resmi Google. Covers GCP deployment, management, application operations dan cloud platform skills dengan hands-on experience. Includes 20 courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">29 jam</div>
+        </div>
+        <div class="tip-box"><p>🎯 Ambil <strong>path utama ini dulu</strong>. Semua 15 modul di bawah sudah include di dalamnya. Kamu tinggal selesaikan satu per satu secara urut.</p></div>
+      </div>
+    </div>
+
+    <!-- Fase 3 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">03</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">15 Modul ACE — Selesaikan Urut</div>
+          <div class="phase-head-meta">Minggu 5–9 · Ini inti sertifikasi Google ACE</div>
+        </div>
+        <span class="phase-tag tag-free">GRATIS</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Google Cloud Platform Ecosystem</div>
+            <div class="course-desc">Virtual Machines, Kubernetes, Cloud Functions. Account setup, console navigation, billing & pricing.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">2</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Configuring Google Cloud</div>
+            <div class="course-desc">Cloud Shell, database services, BigQuery untuk efficient development.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">3</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Identity & Access Management (IAM)</div>
+            <div class="course-desc">Manage authorization dengan Google Cloud IAM. Custom roles dan IAM audit logs.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">4</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Google Cloud Resource Manager</div>
+            <div class="course-desc">Hierarchically manage resources. Labels, tags, project migration, audit logs.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">5</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Google Virtual Private Cloud (VPC)</div>
+            <div class="course-desc">VPC networks dan subnets. Cloud VPN, Deployment Manager templates, subnet management.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">6</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Implementing Google Compute Engine</div>
+            <div class="course-desc">Create dan manage Virtual Machine instances, sole-tenant nodes, managed instance group.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">7</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Managing Google Compute Engine</div>
+            <div class="course-desc">Manage VM instances, OS inventory management, snapshots dan images, metadata server.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">8</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Implementing Google Cloud Storage</div>
+            <div class="course-desc">Object Lifecycle Management, storage buckets, storage classes, naming. Migrate database ke Cloud SQL.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">9</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Managing Google Cloud Storage</div>
+            <div class="course-desc">Cloud Storage buckets, BigQuery untuk estimasi storage, Dataproc untuk job status.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">10</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Implementing Google Kubernetes Engine</div>
+            <div class="course-desc">GKE clusters, security features, networking, monitoring dan logging untuk containerized apps.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">11</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Managing Google Kubernetes Engine</div>
+            <div class="course-desc">Cluster management, access control, volumes, secrets, ConfigMaps, StatefulSets, DaemonSets.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">12</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Implementing Google App Engine</div>
+            <div class="course-desc">Scalable hosting, gcloud deployment, Cloud Run, Cloud Functions, Pub/Sub notifications.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">13</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Managing Google App Engine</div>
+            <div class="course-desc">Traffic splitting, custom domains, SSL, app resources, scaling configurations, versioning.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">14</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Google Cloud Operations Suite</div>
+            <div class="course-desc">Cloud Monitoring, Cloud Logging, Cloud Trace, Cloud Debugger untuk app performance.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">15</div>
+          <div class="course-details">
+            <div class="course-name">Google ACE: Google Cloud Load Balancing</div>
+            <div class="course-desc">Autoscaling, traffic distribution, access control, SSL dan TCP traffic distribution.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="tip-box"><p>⚡ <strong>Sambil belajar ini:</strong> langsung praktik di Google Cloud Console pakai <strong>free tier $300 kredit 90 hari</strong>. Jangan cuma baca — deploy sesuatu!</p></div>
+      </div>
+    </div>
+
+    <!-- Fase 4 -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">04</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Google Professional — Spesialisasi Lanjutan</div>
+          <div class="phase-head-meta">Minggu 10–14 · Pilih salah satu sesuai arah karir</div>
+        </div>
+        <span class="phase-tag tag-optional">PILIH SATU</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">A</div>
+          <div class="course-details">
+            <div class="course-name">Google Cloud Digital Leader</div>
+            <div class="course-desc">Cloud concepts, GCP products, services dan business applications. Cocok kalau mau arah business/management.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner</span><span class="cbadge">14 Courses</span></div>
+          </div>
+          <div class="course-dur">23 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">B</div>
+          <div class="course-details">
+            <div class="course-name">Google Professional Data Engineer</div>
+            <div class="course-desc">Data pipelines, big data processing, GCP storage, analysis dan ML tools. Kalau mau ke data engineering.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span><span class="cbadge">15 Courses</span></div>
+          </div>
+          <div class="course-dur">20 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">C</div>
+          <div class="course-details">
+            <div class="course-name">Google Professional Cloud DevOps Engineer</div>
+            <div class="course-desc">CI/CD pipelines, configuration management, secrets, deployment pipeline security. Kalau mau ke DevOps.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span><span class="cbadge">20 Courses</span></div>
+          </div>
+          <div class="course-dur">23 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">D</div>
+          <div class="course-details">
+            <div class="course-name">Google Professional Cloud Developer</div>
+            <div class="course-desc">GCP application design, deployment, scalable development, cloud-native solutions. Kalau mau ke backend dev.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span><span class="cbadge">19 Courses</span></div>
+          </div>
+          <div class="course-dur">27 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">E</div>
+          <div class="course-details">
+            <div class="course-name">Google Professional Cloud Architect</div>
+            <div class="course-desc">Cloud architecture design, infrastructure management, scalable solution development. Level paling tinggi.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Advanced</span><span class="cbadge">18 Courses</span></div>
+          </div>
+          <div class="course-dur">25 jam</div>
+        </div>
+        <div class="tip-box"><p>🎯 <strong>Pilih SATU dulu</strong> sesuai arah karir kamu. Jangan ambil semua sekaligus. Selesaikan satu sampai tuntas, baru lanjut ke yang lain.</p></div>
+      </div>
+    </div>
+
+    <!-- Fase 5 -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">05</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">GCP AI & Bonus (Opsional)</div>
+          <div class="phase-head-meta">Kursus gratis bonus · bisa diambil kapan aja</div>
+        </div>
+        <span class="phase-tag tag-free">GRATIS</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on GCP: An Introduction</div>
+            <div class="course-desc">AI development di GCP, GCP advantages untuk ML, image generation, NLP.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on GCP: Deep Dive Into Generative AI Studio</div>
+            <div class="course-desc">Language model training, tuning, performance evaluation, deployment, speech-to-text.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on GCP: Harnessing Generative AI with Vertex AI</div>
+            <div class="course-desc">Vertex AI, AI Studio, Vertex API, model garden, custom model creation, ethical AI.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on GCP: Empowering ML Workflows with Vertex AI</div>
+            <div class="course-desc">End-to-end ML workflows, model deployment, training, data prep, feature engineering.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on GCP: Building GenAI-powered Apps in GCP</div>
+            <div class="course-desc">Build GenAI app: environment setup, TensorFlow, training loop, dockerization, model deployment.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fase 6 -->
+<div class="phase-block">
+  <div class="phase-head" onclick="togglePhase(this)">
+    <div class="phase-num-badge">06</div>
+    <div class="phase-head-info">
+      <div class="phase-head-title">Bootcamp (Digital Skola / lainnya)</div>
+      <div class="phase-head-meta">Setelah punya dasar + 1 project · bukan untuk pemula nol</div>
+    </div>
+    <span class="phase-tag tag-paid">PAID</span>
+    <span class="toggle-arrow">▼</span>
+  </div>
+
+  <div class="phase-body">
+
+    <div class="course-item">
+      <div class="course-order">1</div>
+      <div class="course-details">
+        <div class="course-name">Cloud Engineer Bootcamp</div>
+        <div class="course-desc">
+          Bootcamp intensif untuk memperdalam cloud. Fokus ke project real, deployment, CI/CD, dan best practice industri.
+        </div>
+        <div class="course-badges">
+          <span class="cbadge cbadge-path">Bootcamp</span>
+          <span class="cbadge cbadge-level">Intermediate</span>
+        </div>
+      </div>
+      <div class="course-dur">1–3 bulan</div>
+    </div>
+
+    <div class="tip-box">
+      <p>
+        🚀 <strong>Masuk bootcamp setelah siap:</strong> sudah paham basic cloud, pernah deploy project, dan tidak asing dengan terminal.
+        Kalau belum, kamu akan tertinggal di awal.
+      </p>
+    </div>
+
+    <div class="tip-box">
+      <p>
+        🎯 <strong>Target di fase ini:</strong> bikin project besar (CI/CD, deployment app, monitoring), dapat sertifikat bootcamp, dan siap apply kerja.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+  <!-- ======================== AWS ======================== -->
+  <div class="platform-section aws" id="section-aws">
+    <div class="platform-header">
+      <div class="platform-icon">🟠</div>
+      <div class="platform-info">
+        <h2>Amazon Web Services (AWS)</h2>
+        <p>Platform cloud terbesar di dunia · Ambil setelah selesai Google ACE</p>
+      </div>
+      <div class="platform-stats">
+        <div class="pstat"><div class="pstat-num">4</div><div class="pstat-label">Fase</div></div>
+        <div class="pstat"><div class="pstat-num">~130jam</div><div class="pstat-label">Total</div></div>
+      </div>
+    </div>
+
+    <!-- AWS Fase 1 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">01</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">AWS Dasar — Cloud Practitioner</div>
+          <div class="phase-head-meta">Mulai sini · fondasi AWS untuk pemula</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details">
+            <div class="course-name">CLF-C02: AWS Certified Cloud Practitioner v1.1</div>
+            <div class="course-desc">AWS cloud foundation — security, billing, architecture. Perfect untuk pemula yang belum pernah pakai AWS. Includes 18 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">9 jam</div>
+        </div>
+        <div class="tip-box"><p>🟠 <strong>CLF-C02 dulu!</strong> Ini entry point AWS yang paling tepat. Konsepnya mirip dengan yang sudah dipelajari di Google, tapi terminologinya beda.</p></div>
+      </div>
+    </div>
+
+    <!-- AWS Fase 2 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">02</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">AWS Associate — Pilih Spesialisasi</div>
+          <div class="phase-head-meta">Setelah Cloud Practitioner selesai · pilih SATU jalur</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">A</div>
+          <div class="course-details">
+            <div class="course-name">SAA-C03: AWS Certified Solutions Architect — Associate</div>
+            <div class="course-desc">AWS architecture, deployment strategies, cloud services, data storage, networking, security, cost management. Jalur paling populer. Includes 16 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">22 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">B</div>
+          <div class="course-details">
+            <div class="course-name">DVA-C02: AWS Certified Developer — Associate v1.1</div>
+            <div class="course-desc">Develop, deploy, debug cloud applications pakai AWS services dan CI/CD workflows. Cocok kalau background developer. Includes 23 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">37 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AWS Fase 3 -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">03</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">AWS Professional — Level Lanjut</div>
+          <div class="phase-head-meta">Setelah associate selesai · level tertinggi AWS</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">A</div>
+          <div class="course-details">
+            <div class="course-name">SAP-C02: AWS Certified Solutions Architect — Professional</div>
+            <div class="course-desc">Advanced architecture, distributed systems, AWS best practices. Level paling tinggi di Solutions Architect. Includes 21 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Advanced</span></div>
+          </div>
+          <div class="course-dur">40 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">B</div>
+          <div class="course-details">
+            <div class="course-name">DOP-C02: AWS Certified DevOps Engineer — Professional</div>
+            <div class="course-desc">Deployment automation, application management, SDLC optimization, pipeline development. Includes 20 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">36 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AWS Fase 4 Bonus -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">04</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">AWS AI & Spesialisasi</div>
+          <div class="phase-head-meta">Opsional · bisa diambil paralel atau setelah</div>
+        </div>
+        <span class="phase-tag tag-optional">OPSIONAL</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">AIF-C01: AWS Certified AI Practitioner</div>
+            <div class="course-desc">ML basics, AI services, data preparation, model deployment. Includes 12 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">7 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">MLS-C01: AWS Certified Machine Learning — Specialty</div>
+            <div class="course-desc">Model building, training, tuning, deployment, cloud-based ML implementation. Includes 18 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">17 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Getting Started (Free)</div>
+            <div class="course-desc">AWS GenAI services, foundational models, infrastructure untuk GenAI solutions.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Building GenAI Models with Amazon Bedrock (Free)</div>
+            <div class="course-desc">Amazon Bedrock core concepts, model design, project evaluation, GenAI business applications.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Building GenAI Models with Amazon SageMaker (Free)</div>
+            <div class="course-desc">GANs, VAEs, optimization, transfer learning, deployment, monitoring di SageMaker.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Creating Intelligent Chatbots (Free)</div>
+            <div class="course-desc">Amazon Lex dan Polly, context-aware conversations, sentiment analysis.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Generating Code with Amazon CodeWhisperer (Free)</div>
+            <div class="course-desc">Setup, automated code generation, software optimization, security configuration.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Generating Speech with Amazon Polly (Free)</div>
+            <div class="course-desc">Natural speech generation, voice customization, SSML, secure usage, cost optimization.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details">
+            <div class="course-name">Generative AI on AWS: Deploying & Managing GenAI Services on AWS (Free)</div>
+            <div class="course-desc">AWS deployment services untuk GenAI. Data optimization, model training, security dengan SageMaker.</div>
+            <div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">1 jam</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== AZURE ======================== -->
+  <div class="platform-section azure" id="section-azure">
+    <div class="platform-header">
+      <div class="platform-icon">🔵</div>
+      <div class="platform-info">
+        <h2>Microsoft Azure</h2>
+        <p>Platform Microsoft · Sangat relevan untuk perusahaan enterprise & corporate</p>
+      </div>
+      <div class="platform-stats">
+        <div class="pstat"><div class="pstat-num">4</div><div class="pstat-label">Fase</div></div>
+        <div class="pstat"><div class="pstat-num">~220jam</div><div class="pstat-label">Total</div></div>
+      </div>
+    </div>
+
+    <!-- Azure Fase 1 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">01</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Azure Fundamentals — Mulai Sini</div>
+          <div class="phase-head-meta">Fondasi wajib sebelum semua Azure lainnya</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details">
+            <div class="course-name">AZ-900: Microsoft Azure Fundamentals v1.1</div>
+            <div class="course-desc">Azure cloud architecture, core services, compliance, governance, cost management. Mulai dari sini sebelum semua Azure lainnya. Includes 19 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">28 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">2</div>
+          <div class="course-details">
+            <div class="course-name">MS-900: Microsoft 365 Fundamentals v1.1</div>
+            <div class="course-desc">Cloud services, productivity tools, security, compliance, collaboration features. Includes 10 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">7 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">3</div>
+          <div class="course-details">
+            <div class="course-name">DP-900: Microsoft Azure Data Fundamentals v1.1</div>
+            <div class="course-desc">Cloud data services, analytics solutions, business intelligence, core data concepts. Includes 24 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">23 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">4</div>
+          <div class="course-details">
+            <div class="course-name">AI-900: Azure AI Fundamentals</div>
+            <div class="course-desc">Azure Machine Learning, ML techniques, NLP workloads, conversational AI. Includes 15 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">21 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Azure Fase 2 -->
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">02</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Azure Associate — Spesialisasi</div>
+          <div class="phase-head-meta">Setelah fundamentals · pilih sesuai jalur karir</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">A</div>
+          <div class="course-details">
+            <div class="course-name">AZ-104: Microsoft Azure Administrator</div>
+            <div class="course-desc">Resource management, virtual networks, monitoring, backup solutions, cloud security. Cocok untuk cloud admin. Includes 20 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">22 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">B</div>
+          <div class="course-details">
+            <div class="course-name">AZ-204: Developing Solutions for Microsoft Azure</div>
+            <div class="course-desc">Cloud app development, testing, maintenance, scalable solutions. Cocok untuk developer. Includes 30 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">29 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">C</div>
+          <div class="course-details">
+            <div class="course-name">AZ-700: Microsoft Certified Azure Network Engineer Associate</div>
+            <div class="course-desc">Design, implement, manage Azure networking — hybrid connectivity, routing, network security. Includes 21 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div>
+          </div>
+          <div class="course-dur">28 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">D</div>
+          <div class="course-details">
+            <div class="course-name">AZ-500: Microsoft Certified Azure Security Engineer Associate v1.1</div>
+            <div class="course-desc">Security controls, identity management, cloud infrastructure security, threat response. Includes 12 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">23 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">E</div>
+          <div class="course-details">
+            <div class="course-name">DP-100: Designing and Implementing a Data Science Solution on Azure</div>
+            <div class="course-desc">Machine learning models dan data analytics di Azure. Includes 20 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">22 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Azure Fase 3 -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">03</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Azure Expert — Level Tertinggi</div>
+          <div class="phase-head-meta">Setelah associate · butuh pengalaman nyata</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">A</div>
+          <div class="course-details">
+            <div class="course-name">AZ-305: Designing Microsoft Azure Infrastructure Solutions</div>
+            <div class="course-desc">Governance, security, data storage, business continuity solutions. Includes 18 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Advanced</span></div>
+          </div>
+          <div class="course-dur">20 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">B</div>
+          <div class="course-details">
+            <div class="course-name">AZ-400: Designing and Implementing Microsoft DevOps Solutions</div>
+            <div class="course-desc">CI/CD, automation, infrastructure as code, monitoring. Level advanced DevOps Azure. Includes 16 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Advanced</span></div>
+          </div>
+          <div class="course-dur">23 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Azure Free Bonus -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">+</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Azure AI & Bonus Gratis</div>
+          <div class="phase-head-meta">Bisa diambil kapan aja · semua gratis</div>
+        </div>
+        <span class="phase-tag tag-free">GRATIS</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details"><div class="course-name">Introduction to Generative AI on Azure</div><div class="course-desc">Azure OpenAI, Bot, ML services. Chatbot creation, personalized marketing, model tuning.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div></div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details"><div class="course-name">Generative AI with Azure OpenAI</div><div class="course-desc">Models, practical uses, text answering, pricing, limitations, future Azure OpenAI.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div></div>
+          <div class="course-dur">1 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details"><div class="course-name">Deep Dive Into Generative AI with Azure OpenAI</div><div class="course-desc">Architecture, OpenAI Studio, model customization, text & image generation, integration.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div>
+          <div class="course-dur">2 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">+</div>
+          <div class="course-details"><div class="course-name">Generative AI & the Azure Bot AI Service</div><div class="course-desc">Smart chatbots dengan GenAI dan Copilot Studio. CLU models, Cognitive Services.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div>
+          <div class="course-dur">1 jam</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== KUBERNETES ======================== -->
+  <div class="platform-section k8s" id="section-k8s">
+    <div class="platform-header">
+      <div class="platform-icon">⚙️</div>
+      <div class="platform-info">
+        <h2>Kubernetes</h2>
+        <p>Container orchestration · Wajib untuk cloud engineer modern · Platform-agnostic</p>
+      </div>
+      <div class="platform-stats">
+        <div class="pstat"><div class="pstat-num">2</div><div class="pstat-label">Fase</div></div>
+        <div class="pstat"><div class="pstat-num">~32jam</div><div class="pstat-label">Total</div></div>
+      </div>
+    </div>
+
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">01</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Certified Kubernetes Administrator (CKA) 2024</div>
+          <div class="phase-head-meta">Ambil ini setelah paham salah satu cloud platform</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details">
+            <div class="course-name">Certified Kubernetes Administrator (CKA) 2024</div>
+            <div class="course-desc">Manage, scale, deploy containerized workloads dengan Kubernetes di cloud-native environment. Sertifikasi paling dikenal untuk container orchestration. Includes 12 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">14 jam</div>
+        </div>
+        <div class="tip-box"><p>⚙️ <strong>Kenapa CKA penting?</strong> Kubernetes jalan di semua cloud (GCP, AWS, Azure). Kalau udah CKA, kamu bisa kerja di perusahaan yang pakai platform apapun.</p></div>
+      </div>
+    </div>
+
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">02</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Certified Kubernetes Application Developer (CKAD)</div>
+          <div class="phase-head-meta">Lanjutan CKA · fokus ke developer side</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">2</div>
+          <div class="course-details">
+            <div class="course-name">Certified Kubernetes Application Developer (CKAD)</div>
+            <div class="course-desc">Design, build, deploy cloud-native applications pakai Kubernetes primitives dan scalable microservice architecture. Includes 16 Courses.</div>
+            <div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div>
+          </div>
+          <div class="course-dur">18 jam</div>
+        </div>
+        <div class="tip-box"><p>🎯 <strong>CKA dulu baru CKAD.</strong> CKA = admin/ops side, CKAD = developer side. Dua-duanya sangat dicari industri.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== MULTI ======================== -->
+  <div class="platform-section multi" id="section-multi">
+    <div class="platform-header">
+      <div class="platform-icon">🌐</div>
+      <div class="platform-info">
+        <h2>Multi-Cloud, CompTIA & Lainnya</h2>
+        <p>Security, cross-platform, Oracle · Ambil setelah minimal satu platform selesai</p>
+      </div>
+      <div class="platform-stats">
+        <div class="pstat"><div class="pstat-num">5+</div><div class="pstat-label">Paths</div></div>
+        <div class="pstat"><div class="pstat-num">~200jam</div><div class="pstat-label">Total</div></div>
+      </div>
+    </div>
+
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">🔒</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Security — Cloud & Platform Agnostic</div>
+          <div class="phase-head-meta">Untuk yang mau spesialisasi ke cloud security</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details"><div class="course-name">CLO-002: CompTIA Cloud Essentials+</div><div class="course-desc">Cloud fundamentals, business impact, organizational implementation, adoption strategies. Includes 16 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div></div>
+          <div class="course-dur">20 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">2</div>
+          <div class="course-details"><div class="course-name">CV0-004: CompTIA Cloud+</div><div class="course-desc">Cloud infrastructure management, configuration, deployment, troubleshooting. Includes 20 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div></div>
+          <div class="course-dur">28 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">3</div>
+          <div class="course-details"><div class="course-name">Certified Cloud Security Professional — CCSP</div><div class="course-desc">Cloud architecture, data security, identity management, cloud compliance. Includes 22 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div></div>
+          <div class="course-dur">10 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-block open">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">☁️</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Multi-Cloud & Cross-Platform</div>
+          <div class="phase-head-meta">Setelah mahir satu platform · ekspansi ke semua cloud</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details"><div class="course-name">The Generative AI Cloud Odyssey: Exploring AWS, Azure, and GCP</div><div class="course-desc">GenAI di semua 3 platform sekaligus — AWS, Azure, GCP. Hands-on projects. Includes 48 Courses!</div><div class="course-badges"><span class="cbadge cbadge-path">Skill Path</span><span class="cbadge cbadge-level">Intermediate</span><span class="cbadge cbadge-cert">With Certificate</span></div></div>
+          <div class="course-dur">32 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">🔴</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Oracle Cloud Infrastructure (OCI)</div>
+          <div class="phase-head-meta">Platform enterprise Oracle · niche tapi dicari perusahaan besar</div>
+        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details"><div class="course-name">1Z0-1085-25: Oracle Cloud Infrastructure 2025 Foundations Associate</div><div class="course-desc">OCI foundation untuk tech & non-tech professionals baru ke OCI. Includes 21 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div></div>
+          <div class="course-dur">25 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">2</div>
+          <div class="course-details"><div class="course-name">1Z0-1072-25: Oracle Cloud Infrastructure 2025 Architect Associate</div><div class="course-desc">IAM, Networking, Compute, Storage, secure scalable infrastructure, hands-on labs. Includes 23 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Intermediate</span></div></div>
+          <div class="course-dur">22 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">3</div>
+          <div class="course-details"><div class="course-name">1Z0-1195-25: Oracle Data Platform 2025 Foundations Associate</div><div class="course-desc">Autonomous Database, Data Lakehouse, Analytics, OCI data management. Includes 20 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div></div>
+          <div class="course-dur">23 jam</div>
+        </div>
+        <div class="course-item">
+          <div class="course-order">4</div>
+          <div class="course-details"><div class="course-name">1Z0-1122-25: Oracle Cloud Infrastructure 2025 AI Foundations Associate</div><div class="course-desc">AI & ML fundamentals di OCI. Practical OCI AI concepts. Includes 23 Courses.</div><div class="course-badges"><span class="cbadge cbadge-path">Certification Path</span><span class="cbadge cbadge-level">Beginner Friendly</span></div></div>
+          <div class="course-dur">25 jam</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge">🆓</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">CompTIA Cloud Essentials+ — Free Modules</div>
+          <div class="phase-head-meta">Semua gratis · bisa diambil paralel kapan aja</div>
+        </div>
+        <span class="phase-tag tag-free">GRATIS</span>
+        <span class="toggle-arrow">▼</span>
+      </div>
+      <div class="phase-body">
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Essential Cloud Principles</div><div class="course-desc">Cloud essentials, deployment models, cloud infrastructure components.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Essential Cloud Networking</div><div class="course-desc">Cloud migration strategies, VPC management, DMZ setup, SDN implementation.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div></div><div class="course-dur">2 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Security Considerations</div><div class="course-desc">IAM, single sign-on, multi-factor authentication, federated authentication.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Storage Technologies</div><div class="course-desc">Cloud storage systems, hot/cold storage, data protection, replication, RAID.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">DevOps in the Cloud</div><div class="course-desc">DevOps best practices, CI/CD pipelines, automation untuk cloud deployment.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Governance & Securing Data</div><div class="course-desc">Policy-based access control, data sovereignty, vulnerability assessment.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">2 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Design Considerations</div><div class="course-desc">High availability, disaster recovery strategies, benchmarking, failover scenarios.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Native Apps & Cloud Data Analytics</div><div class="course-desc">Cloud-native architecture, containerization, microservices, big data management.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Connectivity & Load Balancing</div><div class="course-desc">Load balancer architectures, disaster recovery strategies, resource utilization.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Beginner</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Utilizing Cloud Services</div><div class="course-desc">IoT, blockchain, VDI di cloud. Digital marketing, self-service cloud, cost management.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Operations within Cloud</div><div class="course-desc">AWS services untuk data management, replication, storage, backup, autoscaling.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Migration Strategies</div><div class="course-desc">Migration types, best practices, hybrid cloud approaches untuk successful migration.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Gap Analysis & Cloud Assessment</div><div class="course-desc">Cloud transformation stages, technology stack assessment, adoption strategies.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Licensing Models & Risk Mitigation</div><div class="course-desc">Cloud pricing factors, risk mitigation strategies, compliance implementation.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Contracting with Cloud Service Providers</div><div class="course-desc">Cloud costs, licensing models, contract negotiation strategies.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+        <div class="course-item"><div class="course-order">+</div><div class="course-details"><div class="course-name">Cloud Adoption to Enhance Business Value</div><div class="course-desc">Cloud SLAs, POC creation, cloud adoption planning untuk business value.</div><div class="course-badges"><span class="cbadge cbadge-free">FREE</span><span class="cbadge cbadge-level">Intermediate</span></div></div><div class="course-dur">1 jam</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <h3>// Urutan Komplit Semua Platform</h3>
+    <div class="flow">
+      <span class="flow-step">🐍 Python + Cloud Dasar</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">☁️ Google ACE</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">⚙️ Kubernetes CKA</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">🟠 AWS CLF + SAA</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">🔵 Azure AZ-900 + AZ-104</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-step">🔒 Security & Multi-Cloud</span>
+    </div>
+    <p class="note">
+      Total kursus di Codecademy: <strong>85+ kursus</strong> · Data real dari codecademy.com/catalog/subject/cloud-computing<br>
+      ⚠️ <strong>Fokus Google dulu</strong> sampai dapat sertifikat · AWS & Azure menyusul · Jangan paralel semua
+    </p>
+  </div>
+
+</div>
+
+<script>
+function switchTab(platform) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.platform-section').forEach(s => s.classList.remove('active'));
+  document.querySelector('.tab-' + platform).classList.add('active');
+  document.getElementById('section-' + platform).classList.add('active');
+}
+
+function togglePhase(head) {
+  const block = head.parentElement;
+  block.classList.toggle('open');
+}
+</script>
+</body>
+</html>
