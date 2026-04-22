@@ -848,6 +848,203 @@ h1 {
   .page { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
   #pwa-banner.show { bottom: calc(16px + env(safe-area-inset-bottom)); }
 }
+
+/* =============================================
+   MODE SWITCHER — Desktop pill + Mobile bottom nav
+   ============================================= */
+
+/* Desktop mode pill (shown on ≥641px) */
+.mode-switcher {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+.mode-pill {
+  display: inline-flex;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 50px;
+  padding: 4px;
+  gap: 2px;
+}
+.mode-btn {
+  padding: 9px 24px;
+  border-radius: 50px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+}
+.mode-btn:hover { color: var(--white); }
+.mode-btn.active {
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.mode-btn.active.belajar { background: rgba(66,133,244,0.18); color: #4285F4; }
+.mode-btn.active.praktik { background: rgba(236,72,153,0.18); color: #f472b6; }
+.mode-btn .mbtn-icon { font-size: 1rem; }
+
+/* Hide desktop mode switcher on mobile */
+@media (max-width: 640px) {
+  .mode-switcher { display: none; }
+}
+
+/* ===== BOTTOM NAV (mobile only) ===== */
+.bottom-nav {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 20, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  flex-direction: row;
+  padding: 8px 16px;
+  gap: 8px;
+}
+
+/* safe area for home bar */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .bottom-nav { padding-bottom: calc(8px + env(safe-area-inset-bottom)); }
+}
+
+.bnav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 6px;
+  border: none;
+  background: transparent;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--muted);
+  position: relative;
+  overflow: hidden;
+}
+.bnav-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: rgba(255,255,255,0);
+  transition: background 0.2s;
+}
+.bnav-item.active::before { background: rgba(255,255,255,0.06); }
+.bnav-item.active.belajar::before { background: rgba(66,133,244,0.12); }
+.bnav-item.active.praktik::before { background: rgba(236,72,153,0.12); }
+
+.bnav-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.2s cubic-bezier(0.34,1.56,0.64,1);
+}
+.bnav-item.active .bnav-icon { transform: scale(1.15); }
+.bnav-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.bnav-item.active.belajar .bnav-label { color: #4285F4; }
+.bnav-item.active.praktik .bnav-label { color: #f472b6; }
+
+/* Active indicator dot */
+.bnav-dot {
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.2s;
+  margin-top: -2px;
+}
+.bnav-item.active.belajar .bnav-dot { background: #4285F4; }
+.bnav-item.active.praktik .bnav-dot { background: #f472b6; }
+
+/* Sub-platform nav strip (inside bottom area, only in belajar mode) */
+.bottom-subnav {
+  display: none;
+  position: fixed;
+  bottom: 70px; /* sits above bottom-nav */
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(6,6,16,0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 10px 16px 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+  gap: 7px;
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.bottom-subnav::-webkit-scrollbar { display: none; }
+.bottom-subnav.visible {
+  display: flex;
+  transform: translateY(0);
+}
+
+.subnav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+.subnav-btn.active { color: var(--white); border-color: currentColor; background: rgba(255,255,255,0.06); }
+.subnav-btn.google.active { color: #4285F4; background: rgba(66,133,244,0.1); border-color: rgba(66,133,244,0.3); }
+.subnav-btn.aws.active { color: #FF9900; background: rgba(255,153,0,0.1); border-color: rgba(255,153,0,0.3); }
+.subnav-btn.azure.active { color: #0078D4; background: rgba(0,120,212,0.1); border-color: rgba(0,120,212,0.3); }
+.subnav-btn.k8s.active { color: #326CE5; background: rgba(50,108,229,0.1); border-color: rgba(50,108,229,0.3); }
+.subnav-btn.multi.active { color: #a78bfa; background: rgba(167,139,250,0.1); border-color: rgba(167,139,250,0.3); }
+
+/* Show bottom nav + subnav on mobile */
+@media (max-width: 640px) {
+  .bottom-nav { display: flex; }
+  /* Push page content up above both navs (subnav ~50px + bottom-nav ~70px = ~130px) */
+  .page { padding-bottom: 160px; }
+  /* Hide old top tabs on mobile — replaced by bottom nav */
+  .tabs { display: none !important; }
+  /* PWA banner clears the bottom navs when subnav visible (~130px) */
+  #pwa-banner.show { bottom: 135px; }
+}
+@media (min-width: 641px) {
+  .bottom-nav { display: none !important; }
+  .bottom-subnav { display: none !important; }
+}
 </style>
 </head>
 <body>
@@ -860,14 +1057,25 @@ h1 {
     <p class="sub">semua platform · urut dari dasar sampai sertifikasi · data dari codecademy.com</p>
   </div>
 
-  <!-- TABS -->
-  <div class="tabs">
+  <!-- MODE SWITCHER (desktop) -->
+  <div class="mode-switcher">
+    <div class="mode-pill">
+      <button class="mode-btn belajar active" id="mode-belajar" onclick="switchMode('belajar')">
+        <span class="mbtn-icon">📚</span> Belajar
+      </button>
+      <button class="mode-btn praktik" id="mode-praktik" onclick="switchMode('praktik')">
+        <span class="mbtn-icon">🛠️</span> Latihan Praktik
+      </button>
+    </div>
+  </div>
+
+  <!-- PLATFORM TABS (desktop only — mobile uses bottom-subnav) -->
+  <div class="tabs" id="platform-tabs">
     <button class="tab tab-google active" onclick="switchTab('google')">☁️ Google Cloud</button>
     <button class="tab tab-aws" onclick="switchTab('aws')">🟠 AWS</button>
     <button class="tab tab-azure" onclick="switchTab('azure')">🔵 Microsoft Azure</button>
     <button class="tab tab-k8s" onclick="switchTab('k8s')">⚙️ Kubernetes</button>
     <button class="tab tab-multi" onclick="switchTab('multi')">🌐 Multi-Cloud & Lainnya</button>
-    <button class="tab tab-praktik" onclick="switchTab('praktik')">🛠️ Latihan Praktik</button>
   </div>
 
   <!-- ======================== GOOGLE ======================== -->
@@ -2058,6 +2266,29 @@ h1 {
 
 </div>
 
+<!-- MOBILE BOTTOM NAV -->
+<nav class="bottom-nav" id="bottom-nav">
+  <button class="bnav-item belajar active" id="bnav-belajar" onclick="switchMode('belajar')">
+    <span class="bnav-icon">📚</span>
+    <span class="bnav-label">Belajar</span>
+    <span class="bnav-dot"></span>
+  </button>
+  <button class="bnav-item praktik" id="bnav-praktik" onclick="switchMode('praktik')">
+    <span class="bnav-icon">🛠️</span>
+    <span class="bnav-label">Praktik</span>
+    <span class="bnav-dot"></span>
+  </button>
+</nav>
+
+<!-- MOBILE SUB-NAV (platform tabs) -->
+<div class="bottom-subnav visible" id="bottom-subnav">
+  <button class="subnav-btn google active" onclick="switchTab('google')">☁️ Google</button>
+  <button class="subnav-btn aws" onclick="switchTab('aws')">🟠 AWS</button>
+  <button class="subnav-btn azure" onclick="switchTab('azure')">🔵 Azure</button>
+  <button class="subnav-btn k8s" onclick="switchTab('k8s')">⚙️ K8s</button>
+  <button class="subnav-btn multi" onclick="switchTab('multi')">🌐 Multi</button>
+</div>
+
 <!-- PWA Install Banner -->
 <div id="pwa-banner">
   <div id="pwa-banner-icon">
@@ -2072,12 +2303,71 @@ h1 {
 </div>
 
 <script>
+// ===== PLATFORM TAB SWITCHING =====
+let _currentMode = 'belajar';
+let _currentPlatform = 'google';
+
 function switchTab(platform) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  _currentPlatform = platform;
+
+  // Deactivate all sections
   document.querySelectorAll('.platform-section').forEach(s => s.classList.remove('active'));
-  document.querySelector('.tab-' + platform).classList.add('active');
+
+  // Desktop tabs
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  const desktopTab = document.querySelector('.tab-' + platform);
+  if (desktopTab) desktopTab.classList.add('active');
+
+  // Mobile subnav buttons
+  document.querySelectorAll('.subnav-btn').forEach(b => b.classList.remove('active'));
+  const mobileBtn = document.querySelector('.subnav-btn.' + platform);
+  if (mobileBtn) mobileBtn.classList.add('active');
+
+  // Activate section
   const section = document.getElementById('section-' + platform);
   if (section) section.classList.add('active');
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===== MODE SWITCHING (Belajar / Praktik) =====
+function switchMode(mode) {
+  _currentMode = mode;
+
+  // Update desktop mode buttons
+  document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+  const dBtn = document.getElementById('mode-' + mode);
+  if (dBtn) dBtn.classList.add('active');
+
+  // Update mobile bottom nav
+  document.querySelectorAll('.bnav-item').forEach(b => b.classList.remove('active'));
+  const mBtn = document.getElementById('bnav-' + mode);
+  if (mBtn) mBtn.classList.add('active');
+
+  const subnav = document.getElementById('bottom-subnav');
+  const platformTabs = document.getElementById('platform-tabs');
+
+  if (mode === 'praktik') {
+    // Deactivate all platform sections
+    document.querySelectorAll('.platform-section').forEach(s => s.classList.remove('active'));
+    // Activate praktik
+    const p = document.getElementById('section-praktik');
+    if (p) p.classList.add('active');
+    // Hide subnav on mobile
+    if (subnav) subnav.classList.remove('visible');
+    // Hide desktop platform tabs
+    if (platformTabs) platformTabs.style.display = 'none';
+  } else {
+    // Belajar mode — restore current platform
+    document.querySelectorAll('.platform-section').forEach(s => s.classList.remove('active'));
+    const section = document.getElementById('section-' + _currentPlatform);
+    if (section) section.classList.add('active');
+    // Show subnav on mobile
+    if (subnav) subnav.classList.add('visible');
+    // Show desktop platform tabs
+    if (platformTabs) platformTabs.style.display = '';
+  }
+
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
