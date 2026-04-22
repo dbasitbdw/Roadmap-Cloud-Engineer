@@ -1689,6 +1689,122 @@
         display: none !important;
       }
     }
+    /* ===== PROGRESS & CHECKBOX ===== */
+    .progress-container {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      width: 100%;
+    }
+    .progress-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      font-family: var(--mono);
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+    .progress-percentage {
+      color: var(--white);
+      font-weight: 700;
+    }
+    .progress-bar-bg {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 10px;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #section-google .progress-bar-fill { background: var(--google-blue); }
+    #section-aws .progress-bar-fill { background: var(--aws-orange); }
+    #section-azure .progress-bar-fill { background: var(--azure-blue); }
+    #section-k8s .progress-bar-fill { background: var(--kubernetes-blue); }
+    #section-multi .progress-bar-fill { background: #a78bfa; }
+    #section-praktik .progress-bar-fill { background: #f472b6; }
+
+    /* Custom Checkbox */
+    .custom-checkbox {
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--border2);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .course-item {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    /* Change layout context for praktik-list li to accommodate checkbox */
+    .praktik-list li.task-has-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .praktik-list li.task-has-checkbox::before {
+      display: none; /* Hide the > arrow, replaced by checkbox */
+    }
+
+    .custom-checkbox:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .chk-icon {
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .completed .custom-checkbox .chk-icon {
+      display: block;
+    }
+
+    /* Platform Checkbox Colors */
+    .completed .custom-checkbox { 
+      background: var(--google-green) !important; 
+      border-color: var(--google-green) !important; 
+    }
+    
+    /* Global Toast */
+    #progress-toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-100px);
+      background: rgba(15, 15, 20, 0.95);
+      border: 1px solid rgba(52, 168, 83, 0.4);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-family: var(--mono);
+      font-weight: 600;
+      z-index: 10000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+    }
+    #progress-toast.show {
+      transform: translateX(-50%) translateY(0);
+    }
   </style>
 </head>
 
@@ -3475,6 +3591,88 @@
       banner.classList.remove('show');
       sessionStorage.setItem('pwa-dismissed', '1');
     }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Setup Toast
+      const toast = document.createElement("div");
+      toast.id = "progress-toast";
+      toast.innerHTML = "✅ Progress disimpan di cache browser Anda";
+      document.body.appendChild(toast);
+
+      function showToast() {
+        if (!localStorage.getItem('toastShown')) {
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 4000);
+          localStorage.setItem('toastShown', 'true');
+        }
+      }
+
+      // 2. Setup Progress Bars and Checkboxes
+      document.querySelectorAll('.platform-section').forEach(section => {
+        const header = section.querySelector('.platform-header');
+        if (!header) return;
+
+        const progressContainer = document.createElement('div');
+        progressContainer.className = 'progress-container';
+        progressContainer.innerHTML = `
+          <div class="progress-info">
+             <span class="progress-label">Progress Pembelajaran</span>
+             <span class="progress-percentage">0%</span>
+          </div>
+          <div class="progress-bar-bg">
+             <div class="progress-bar-fill"></div>
+          </div>
+        `;
+        header.appendChild(progressContainer);
+
+        const items = section.querySelectorAll('.course-item, .praktik-list li, .milestone-step');
+        
+        items.forEach((item, index) => {
+          const platformId = section.id || 'general';
+          const taskId = `${platformId}-task-${index}`;
+          item.dataset.taskId = taskId;
+          item.classList.add('task-has-checkbox');
+
+          const chk = document.createElement('div');
+          chk.className = 'custom-checkbox';
+          chk.innerHTML = '<span class="chk-icon">✓</span>';
+          
+          item.insertBefore(chk, item.firstChild);
+
+          if (localStorage.getItem(taskId) === 'true') {
+            item.classList.add('completed');
+          }
+
+          chk.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isCompleted = item.classList.toggle('completed');
+            if (isCompleted) {
+              localStorage.setItem(taskId, 'true');
+            } else {
+              localStorage.removeItem(taskId);
+            }
+            showToast();
+            updateProgress(section);
+          });
+        });
+        
+        updateProgress(section);
+      });
+
+      function updateProgress(section) {
+        const items = section.querySelectorAll('.task-has-checkbox');
+        if (items.length === 0) return;
+        const completed = section.querySelectorAll('.task-has-checkbox.completed').length;
+        const percentage = Math.round((completed / items.length) * 100);
+        
+        const fill = section.querySelector('.progress-bar-fill');
+        const text = section.querySelector('.progress-percentage');
+        
+        if (fill) fill.style.width = percentage + '%';
+        if (text) text.innerText = percentage + '%';
+      }
+    });
   </script>
 </body>
 
