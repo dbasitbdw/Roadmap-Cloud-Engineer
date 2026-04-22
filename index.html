@@ -4,10 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cloud Engineer Roadmap — My Learning Journey</title>
-<link rel="icon" type="image/webp" href="public/logo.webp">
-<link rel="manifest" href="manifest.json">
+<meta name="description" content="Roadmap lengkap menjadi Cloud Engineer — GCP, AWS, Azure, Kubernetes, dan lebih. Data dari Codecademy.">
+<link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="/public/favicon.ico">
+<link rel="apple-touch-icon" href="/public/favicon.ico">
+<link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#000000">
-<link rel="apple-touch-icon" href="public/logo.webp">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cloud Roadmap">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Clash+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -262,6 +268,196 @@ h1 {
 
 .phase-block.open .toggle-arrow { transform: rotate(180deg); }
 
+/* ===== PHASE NUMBER COLORED BADGES ===== */
+/* Each phase number gets a unique distinct color */
+.phase-num-badge[data-num="01"] { background: rgba(99,102,241,0.18) !important; color: #818cf8 !important; border: 1px solid rgba(99,102,241,0.25); }
+.phase-num-badge[data-num="02"] { background: rgba(20,184,166,0.18) !important; color: #2dd4bf !important; border: 1px solid rgba(20,184,166,0.25); }
+.phase-num-badge[data-num="03"] { background: rgba(245,158,11,0.18) !important; color: #fbbf24 !important; border: 1px solid rgba(245,158,11,0.25); }
+.phase-num-badge[data-num="04"] { background: rgba(239,68,68,0.18) !important; color: #f87171 !important; border: 1px solid rgba(239,68,68,0.25); }
+.phase-num-badge[data-num="05"] { background: rgba(16,185,129,0.18) !important; color: #34d399 !important; border: 1px solid rgba(16,185,129,0.25); }
+.phase-num-badge[data-num="06"] { background: rgba(236,72,153,0.18) !important; color: #f472b6 !important; border: 1px solid rgba(236,72,153,0.25); }
+
+/* ===== LATIHAN PRAKTIK SECTION ===== */
+.tab-praktik.active { color: #f472b6; background: rgba(236,72,153,0.08); border-color: #f472b6; }
+
+.praktik-section {
+  margin-bottom: 20px;
+}
+
+.praktik-intro {
+  margin-bottom: 32px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(236,72,153,0.08), rgba(99,102,241,0.08));
+  border: 1px solid rgba(236,72,153,0.2);
+  border-radius: 16px;
+}
+
+.praktik-intro h2 {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f472b6;
+  margin-bottom: 8px;
+}
+
+.praktik-intro p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.praktik-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.praktik-card {
+  padding: 20px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.praktik-card:hover {
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.praktik-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.praktik-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.praktik-card-title {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.praktik-card-sub {
+  font-size: 0.65rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.praktik-list {
+  list-style: none;
+  padding: 0;
+}
+
+.praktik-list li {
+  font-size: 0.73rem;
+  color: #8a9ab8;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.praktik-list li::before {
+  content: '›';
+  color: var(--muted);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.praktik-list li:last-child { border-bottom: none; }
+
+.praktik-badge {
+  display: inline-block;
+  font-size: 0.58rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pb-free { background: rgba(52,168,83,0.12); color: #34A853; border: 1px solid rgba(52,168,83,0.2); }
+.pb-gcp { background: rgba(66,133,244,0.12); color: #4285F4; border: 1px solid rgba(66,133,244,0.2); }
+.pb-aws { background: rgba(255,153,0,0.12); color: #FF9900; border: 1px solid rgba(255,153,0,0.2); }
+.pb-azure { background: rgba(0,120,212,0.12); color: #0078D4; border: 1px solid rgba(0,120,212,0.2); }
+.pb-k8s { background: rgba(50,108,229,0.12); color: #326CE5; border: 1px solid rgba(50,108,229,0.2); }
+
+.praktik-milestone {
+  margin-top: 28px;
+  padding: 22px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+}
+
+.praktik-milestone h3 {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.milestone-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.milestone-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.ms-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.ms-num.m1 { background: rgba(99,102,241,0.2); color: #818cf8; }
+.ms-num.m2 { background: rgba(20,184,166,0.2); color: #2dd4bf; }
+.ms-num.m3 { background: rgba(245,158,11,0.2); color: #fbbf24; }
+.ms-num.m4 { background: rgba(239,68,68,0.2); color: #f87171; }
+.ms-num.m5 { background: rgba(16,185,129,0.2); color: #34d399; }
+.ms-num.m6 { background: rgba(236,72,153,0.2); color: #f472b6; }
+
+.ms-content { flex: 1; }
+.ms-title { font-size: 0.82rem; font-weight: 600; font-family: var(--display); color: var(--white); }
+.ms-desc { font-size: 0.7rem; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+
 .phase-body {
   display: none;
   padding: 0 20px 16px;
@@ -458,6 +654,7 @@ h1 {
     <button class="tab tab-azure" onclick="switchTab('azure')">🔵 Microsoft Azure</button>
     <button class="tab tab-k8s" onclick="switchTab('k8s')">⚙️ Kubernetes</button>
     <button class="tab tab-multi" onclick="switchTab('multi')">🌐 Multi-Cloud & Lainnya</button>
+    <button class="tab tab-praktik" onclick="switchTab('praktik')">🛠️ Latihan Praktik</button>
   </div>
 
   <!-- ======================== GOOGLE ======================== -->
@@ -477,7 +674,7 @@ h1 {
     <!-- Fase 1 -->
     <div class="phase-block open">
       <div class="phase-head" onclick="togglePhase(this)">
-        <div class="phase-num-badge">01</div>
+        <div class="phase-num-badge" data-num="01">01</div>
         <div class="phase-head-info">
           <div class="phase-head-title">Fondasi Wajib</div>
           <div class="phase-head-meta">Minggu 1–2 · Jangan diskip ini!</div>
@@ -511,7 +708,7 @@ h1 {
     <!-- Fase 2 -->
     <div class="phase-block open">
       <div class="phase-head" onclick="togglePhase(this)">
-        <div class="phase-num-badge">02</div>
+        <div class="phase-num-badge" data-num="02">02</div>
         <div class="phase-head-info">
           <div class="phase-head-title">Google Associate Cloud Engineer — Path Utama</div>
           <div class="phase-head-meta">Minggu 3–5 · Ambil path ini, otomatis dapat semua modul di bawah</div>
@@ -536,7 +733,7 @@ h1 {
     <!-- Fase 3 -->
     <div class="phase-block open">
       <div class="phase-head" onclick="togglePhase(this)">
-        <div class="phase-num-badge">03</div>
+        <div class="phase-num-badge" data-num="03">03</div>
         <div class="phase-head-info">
           <div class="phase-head-title">15 Modul ACE — Selesaikan Urut</div>
           <div class="phase-head-meta">Minggu 5–9 · Ini inti sertifikasi Google ACE</div>
@@ -687,7 +884,7 @@ h1 {
     <!-- Fase 4 -->
     <div class="phase-block">
       <div class="phase-head" onclick="togglePhase(this)">
-        <div class="phase-num-badge">04</div>
+        <div class="phase-num-badge" data-num="04">04</div>
         <div class="phase-head-info">
           <div class="phase-head-title">Google Professional — Spesialisasi Lanjutan</div>
           <div class="phase-head-meta">Minggu 10–14 · Pilih salah satu sesuai arah karir</div>
@@ -748,7 +945,7 @@ h1 {
     <!-- Fase 5 -->
     <div class="phase-block">
       <div class="phase-head" onclick="togglePhase(this)">
-        <div class="phase-num-badge">05</div>
+        <div class="phase-num-badge" data-num="05">05</div>
         <div class="phase-head-info">
           <div class="phase-head-title">GCP AI & Bonus (Opsional)</div>
           <div class="phase-head-meta">Kursus gratis bonus · bisa diambil kapan aja</div>
@@ -804,52 +1001,36 @@ h1 {
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- Fase 6 -->
-<div class="phase-block">
-  <div class="phase-head" onclick="togglePhase(this)">
-    <div class="phase-num-badge">06</div>
-    <div class="phase-head-info">
-      <div class="phase-head-title">Bootcamp (Digital Skola / lainnya)</div>
-      <div class="phase-head-meta">Setelah punya dasar + 1 project · bukan untuk pemula nol</div>
-    </div>
-    <span class="phase-tag tag-paid">PAID</span>
-    <span class="toggle-arrow">▼</span>
-  </div>
-
-  <div class="phase-body">
-
-    <div class="course-item">
-      <div class="course-order">1</div>
-      <div class="course-details">
-        <div class="course-name">Cloud Engineer Bootcamp</div>
-        <div class="course-desc">
-          Bootcamp intensif untuk memperdalam cloud. Fokus ke project real, deployment, CI/CD, dan best practice industri.
+    <!-- Fase 6 — inside google section -->
+    <div class="phase-block">
+      <div class="phase-head" onclick="togglePhase(this)">
+        <div class="phase-num-badge" data-num="06">06</div>
+        <div class="phase-head-info">
+          <div class="phase-head-title">Bootcamp (Digital Skola / lainnya)</div>
+          <div class="phase-head-meta">Setelah punya dasar + 1 project · bukan untuk pemula nol</div>
         </div>
-        <div class="course-badges">
-          <span class="cbadge cbadge-path">Bootcamp</span>
-          <span class="cbadge cbadge-level">Intermediate</span>
-        </div>
+        <span class="phase-tag tag-paid">PAID</span>
+        <span class="toggle-arrow">▼</span>
       </div>
-      <div class="course-dur">1–3 bulan</div>
+      <div class="phase-body">
+        <div class="course-item">
+          <div class="course-order">1</div>
+          <div class="course-details">
+            <div class="course-name">Cloud Engineer Bootcamp</div>
+            <div class="course-desc">Bootcamp intensif untuk memperdalam cloud. Fokus ke project real, deployment, CI/CD, dan best practice industri.</div>
+            <div class="course-badges">
+              <span class="cbadge cbadge-path">Bootcamp</span>
+              <span class="cbadge cbadge-level">Intermediate</span>
+            </div>
+          </div>
+          <div class="course-dur">1–3 bulan</div>
+        </div>
+        <div class="tip-box"><p>🚀 <strong>Masuk bootcamp setelah siap:</strong> sudah paham basic cloud, pernah deploy project, dan tidak asing dengan terminal. Kalau belum, kamu akan tertinggal di awal.</p></div>
+        <div class="tip-box"><p>🎯 <strong>Target di fase ini:</strong> bikin project besar (CI/CD, deployment app, monitoring), dapat sertifikat bootcamp, dan siap apply kerja.</p></div>
+      </div>
     </div>
-
-    <div class="tip-box">
-      <p>
-        🚀 <strong>Masuk bootcamp setelah siap:</strong> sudah paham basic cloud, pernah deploy project, dan tidak asing dengan terminal.
-        Kalau belum, kamu akan tertinggal di awal.
-      </p>
-    </div>
-
-    <div class="tip-box">
-      <p>
-        🎯 <strong>Target di fase ini:</strong> bikin project besar (CI/CD, deployment app, monitoring), dapat sertifikat bootcamp, dan siap apply kerja.
-      </p>
-    </div>
-
   </div>
-</div>
 
 
 
@@ -1441,6 +1622,205 @@ h1 {
     </div>
   </div>
 
+  <!-- ======================== LATIHAN PRAKTIK ======================== -->
+  <div class="platform-section" id="section-praktik">
+    <div class="platform-header" style="background: linear-gradient(145deg, rgba(236,72,153,0.08), rgba(99,102,241,0.08)); border-color: rgba(236,72,153,0.15);">
+      <div class="platform-icon" style="background: rgba(236,72,153,0.12);">🛠️</div>
+      <div class="platform-info">
+        <h2 style="color: #f472b6;">Latihan Praktik — Hands-On Labs</h2>
+        <p>Deploy yang beneran · Bukan cuma nonton · Jadikan porto</p>
+      </div>
+      <div class="platform-stats">
+        <div class="pstat"><div class="pstat-num" style="color:#f472b6;">6+</div><div class="pstat-label">Lab Area</div></div>
+        <div class="pstat"><div class="pstat-num" style="color:#f472b6;">Gratis</div><div class="pstat-label">Platform</div></div>
+      </div>
+    </div>
+
+    <div class="praktik-intro">
+      <h2>⚡ Kenapa Latihan Praktik Itu Wajib?</h2>
+      <p>Sertifikat doang tidak cukup. Recruiter mau lihat <strong style="color:var(--white)">apa yang pernah kamu deploy</strong>. Section ini berisi lab hands-on per platform yang bisa langsung kamu kerjain — gratis — dan jadikan portofolio nyata di GitHub / LinkedIn.</p>
+    </div>
+
+    <div class="praktik-grid">
+
+      <!-- Google Cloud -->
+      <div class="praktik-card">
+        <div class="praktik-card-header">
+          <div class="praktik-icon" style="background: rgba(66,133,244,0.12);">☁️</div>
+          <div>
+            <div class="praktik-card-title">Google Cloud Labs</div>
+            <div class="praktik-card-sub">Free tier $300 · 90 hari · Console + CLI</div>
+          </div>
+        </div>
+        <ul class="praktik-list">
+          <li><span class="praktik-badge pb-free">FREE</span>Setup GCP account + billing alert</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Deploy VM pakai Compute Engine</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Buat Cloud Storage bucket + upload file</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Deploy static site ke Cloud Storage + CDN</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Buat GKE cluster + deploy container</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Setup IAM roles + service account</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Cloud Run: deploy Python Flask app</li>
+          <li><span class="praktik-badge pb-gcp">GCP</span>Cloud Monitoring + alerting policy</li>
+        </ul>
+      </div>
+
+      <!-- AWS -->
+      <div class="praktik-card">
+        <div class="praktik-card-header">
+          <div class="praktik-icon" style="background: rgba(255,153,0,0.12);">🟠</div>
+          <div>
+            <div class="praktik-card-title">AWS Labs</div>
+            <div class="praktik-card-sub">Free tier 12 bulan · AWS Console + CLI</div>
+          </div>
+        </div>
+        <ul class="praktik-list">
+          <li><span class="praktik-badge pb-free">FREE</span>Setup AWS account + billing alarm</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>Launch EC2 instance + SSH masuk</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>S3 bucket + static website hosting</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>Lambda function + API Gateway</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>RDS setup + connect dari EC2</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>IAM user + policy + MFA</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>CloudFormation: deploy stack dari template</li>
+          <li><span class="praktik-badge pb-aws">AWS</span>ECS + Fargate: deploy Docker container</li>
+        </ul>
+      </div>
+
+      <!-- Azure -->
+      <div class="praktik-card">
+        <div class="praktik-card-header">
+          <div class="praktik-icon" style="background: rgba(0,120,212,0.12);">🔵</div>
+          <div>
+            <div class="praktik-card-title">Azure Labs</div>
+            <div class="praktik-card-sub">Free $200 kredit 30 hari · Portal + CLI</div>
+          </div>
+        </div>
+        <ul class="praktik-list">
+          <li><span class="praktik-badge pb-free">FREE</span>Setup Azure account + resource group</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>Deploy Linux VM + SSH</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>Azure Blob Storage + static website</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>Azure App Service: deploy web app</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>Azure Functions: serverless trigger</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>Azure AD: setup user + role assignment</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>AKS: deploy Kubernetes cluster</li>
+          <li><span class="praktik-badge pb-azure">AZURE</span>Azure Monitor + Log Analytics</li>
+        </ul>
+      </div>
+
+      <!-- Kubernetes -->
+      <div class="praktik-card">
+        <div class="praktik-card-header">
+          <div class="praktik-icon" style="background: rgba(50,108,229,0.12);">⚙️</div>
+          <div>
+            <div class="praktik-card-title">Kubernetes Labs</div>
+            <div class="praktik-card-sub">Minikube lokal + Play with K8s (free)</div>
+          </div>
+        </div>
+        <ul class="praktik-list">
+          <li><span class="praktik-badge pb-free">FREE</span>Install Minikube + kubectl di lokal</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>Deploy pod + service + expose endpoint</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>Deployment + ReplicaSet + rolling update</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>ConfigMap + Secret management</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>Persistent Volume + PVC</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>Ingress controller + domain routing</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>HPA: horizontal pod autoscaler</li>
+          <li><span class="praktik-badge pb-k8s">K8S</span>Namespace + RBAC setup</li>
+        </ul>
+      </div>
+
+      <!-- Tools Wajib -->
+      <div class="praktik-card">
+        <div class="praktik-card-header">
+          <div class="praktik-icon" style="background: rgba(16,185,129,0.12);">🔧</div>
+          <div>
+            <div class="praktik-card-title">Tools & DevOps Wajib</div>
+            <div class="praktik-card-sub">Kuasai ini dulu sebelum apply kerja</div>
+          </div>
+        </div>
+        <ul class="praktik-list">
+          <li><span class="praktik-badge pb-free">FREE</span>Git + GitHub: branching, PR, merge</li>
+          <li><span class="praktik-badge pb-free">FREE</span>Docker: build image + push ke registry</li>
+          <li><span class="praktik-badge pb-free">FREE</span>Terraform: IaC buat GCP/AWS resource</li>
+          <li><span class="praktik-badge pb-free">FREE</span>GitHub Actions: CI/CD pipeline sederhana</li>
+          <li><span class="praktik-badge pb-free">FREE</span>Linux CLI: ss, netstat, top, df, journalctl</li>
+          <li><span class="praktik-badge pb-free">FREE</span>Python: boto3 (AWS) / google-cloud SDK</li>
+          <li><span class="praktik-badge pb-free">FREE</span>Nginx / Caddy: reverse proxy setup</li>
+          <li><span class="praktik-badge pb-free">FREE</span>Prometheus + Grafana: monitoring stack</li>
+        </ul>
+      </div>
+
+      <!-- Project Porto -->
+      <div class="praktik-card">
+        <div class="praktik-card-header">
+          <div class="praktik-icon" style="background: rgba(236,72,153,0.12);">🏆</div>
+          <div>
+            <div class="praktik-card-title">Project Portofolio</div>
+            <div class="praktik-card-sub">Build ini → taruh di GitHub → tulis di LinkedIn</div>
+          </div>
+        </div>
+        <ul class="praktik-list">
+          <li><span class="praktik-badge pb-gcp">PROJECT</span>Static site + CDN + custom domain di GCP</li>
+          <li><span class="praktik-badge pb-aws">PROJECT</span>Serverless API: Lambda + API GW + DynamoDB</li>
+          <li><span class="praktik-badge pb-k8s">PROJECT</span>Microservice 3-tier deploy di Kubernetes</li>
+          <li><span class="praktik-badge pb-azure">PROJECT</span>CI/CD pipeline full: GitHub → Docker → Cloud</li>
+          <li><span class="praktik-badge pb-free">PROJECT</span>Infrastructure as Code: semua pakai Terraform</li>
+          <li><span class="praktik-badge pb-free">PROJECT</span>Monitoring stack: Prometheus + Grafana + Alert</li>
+          <li><span class="praktik-badge pb-free">PROJECT</span>Multi-cloud: sama app, deploy di 3 platform</li>
+          <li><span class="praktik-badge pb-free">PROJECT</span>Blog/portfolio site deploy pakai cloud native</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Milestone Praktik -->
+    <div class="praktik-milestone">
+      <h3>// Milestone Praktik — Cek Progress Kamu</h3>
+      <div class="milestone-steps">
+        <div class="milestone-step">
+          <div class="ms-num m1">M1</div>
+          <div class="ms-content">
+            <div class="ms-title">Hello Cloud</div>
+            <div class="ms-desc">Udah punya akun GCP/AWS, bisa login console, tau billing, pernah buka Cloud Shell. Done? ✅</div>
+          </div>
+        </div>
+        <div class="milestone-step">
+          <div class="ms-num m2">M2</div>
+          <div class="ms-content">
+            <div class="ms-title">First Deploy</div>
+            <div class="ms-desc">Udah pernah deploy sesuatu — VM, static site, atau function. Bisa akses hasilnya dari browser. Done? ✅</div>
+          </div>
+        </div>
+        <div class="milestone-step">
+          <div class="ms-num m3">M3</div>
+          <div class="ms-content">
+            <div class="ms-title">Container Ready</div>
+            <div class="ms-desc">Udah bisa build Docker image, push ke registry, dan deploy container di cloud atau Kubernetes. Done? ✅</div>
+          </div>
+        </div>
+        <div class="milestone-step">
+          <div class="ms-num m4">M4</div>
+          <div class="ms-content">
+            <div class="ms-title">CI/CD Pipeline</div>
+            <div class="ms-desc">Git push otomatis trigger build + deploy ke cloud. Pakai GitHub Actions atau cloud native pipeline. Done? ✅</div>
+          </div>
+        </div>
+        <div class="milestone-step">
+          <div class="ms-num m5">M5</div>
+          <div class="ms-content">
+            <div class="ms-title">IaC Ready</div>
+            <div class="ms-desc">Infrastructure dituliskan sebagai kode (Terraform/Pulumi). Bisa destroy + recreate dalam menit. Done? ✅</div>
+          </div>
+        </div>
+        <div class="milestone-step">
+          <div class="ms-num m6">M6</div>
+          <div class="ms-content">
+            <div class="ms-title">Porto Siap Kerja</div>
+            <div class="ms-desc">Minimal 3 project di GitHub + dokumentasi README. Monitoring jalan. Bisa explain ke interviewer. Done? ✅</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SUMMARY -->
   <div class="summary">
     <h3>// Urutan Komplit Semua Platform</h3>
@@ -1470,7 +1850,9 @@ function switchTab(platform) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.platform-section').forEach(s => s.classList.remove('active'));
   document.querySelector('.tab-' + platform).classList.add('active');
-  document.getElementById('section-' + platform).classList.add('active');
+  const section = document.getElementById('section-' + platform);
+  if (section) section.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function togglePhase(head) {
