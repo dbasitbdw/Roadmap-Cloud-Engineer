@@ -1,6 +1,10 @@
+"use client";
+import { useLanguage } from "@/context/LanguageContext";
 import styles from './PraktikSection.module.css';
 
 export default function PraktikSection({ platform }) {
+  const { lang } = useLanguage();
+
   if (!platform || platform.id !== 'praktik') return null;
 
   return (
@@ -43,7 +47,7 @@ export default function PraktikSection({ platform }) {
       </div>
 
       <div className={styles.milestone}>
-        <h3 className={styles.msHeader}>Milestone Latihan</h3>
+        <h3 className={styles.msHeader}>{lang === 'en' ? 'Practice Milestones' : 'Milestone Latihan'}</h3>
         <div className={styles.msSteps}>
           {platform.milestones.map((ms, idx) => (
             <div key={idx} className={styles.msStep}>

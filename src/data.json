@@ -11,14 +11,14 @@
             "title": "Mandatory Foundation",
             "meta": "Weeks 1–2 · Don't skim this!",
             "tags": [
-              "GRATIS"
+              "FREE"
             ],
             "courses": [
               {
                 "order": "1",
                 "name": "Intro to Cloud Computing",
                 "desc": "Basic concepts of cloud computing - AWS, Azure, GCP overview. Really start from here.",
-                "duration": "<1 jam",
+                "duration": "<1 hour",
                 "badges": [
                   "FREE ",
                   "Beginner",
@@ -29,7 +29,7 @@
                 "order": "2",
                 "name": "Learn Python 3",
                 "desc": "Mandatory language for automation & scripting in the cloud. Almost all cloud engineers\n                use Python.",
-                "duration": "24 jam",
+                "duration": "24 hours",
                 "badges": [
                   "Beginner",
                   "With Certificate"
@@ -42,14 +42,14 @@
             "title": "Google Associate Cloud Engineer - Main Path",
             "meta": "Week 3–5 · Take this path, you will automatically get all the modules below",
             "tags": [
-              "GRATIS"
+              "FREE"
             ],
             "courses": [
               {
                 "order": "3",
                 "name": "Google Associate Cloud Engineer (Primary Path)",
                 "desc": "Google's official certification path. Covers GCP deployment, management, application\n                operations and cloud platform skills with hands-on experience. Includes 20 courses.",
-                "duration": "29 jam",
+                "duration": "29 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -62,14 +62,14 @@
             "title": "15 ACE Modules - Complete Sequence",
             "meta": "Weeks 5–9 · This is the essence of Google ACE certification",
             "tags": [
-              "GRATIS"
+              "FREE"
             ],
             "courses": [
               {
                 "order": "1",
                 "name": "Google ACE: Google Cloud Platform Ecosystem",
-                "desc": "Virtual Machines, Kubernetes, Cloud Functions. Account setup, console navigation,\n                billing & pricing.",
-                "duration": "1 jam",
+                "desc": "Virtual Machines, Kubernetes, Cloud Functions. Account setup, console navigation, billing & pricing.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -79,7 +79,7 @@
                 "order": "2",
                 "name": "Google ACE: Configuring Google Cloud",
                 "desc": "Cloud Shell, database services, BigQuery for efficient development.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -89,7 +89,7 @@
                 "order": "3",
                 "name": "Google ACE: Identity & Access Management (IAM)",
                 "desc": "Manage authorization with Google Cloud IAM. Custom roles and IAM audit logs.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -99,7 +99,7 @@
                 "order": "4",
                 "name": "Google ACE: Google Cloud Resource Manager",
                 "desc": "Hierarchically manage resources. Labels, tags, project migration, audit logs.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -109,7 +109,7 @@
                 "order": "5",
                 "name": "Google ACE: Google Virtual Private Cloud (VPC)",
                 "desc": "VPC networks and subnets. Cloud VPN, Deployment Manager templates, subnets\n                management.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -119,7 +119,7 @@
                 "order": "6",
                 "name": "Google ACE: Implementing Google Compute Engine",
                 "desc": "Create and manage Virtual Machine instances, sole-tenant nodes, managed instances\n                groups.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -129,7 +129,7 @@
                 "order": "7",
                 "name": "Google ACE: Managing Google Compute Engine",
                 "desc": "Manage VM instances, OS inventory management, snapshots and images, metadata\n                servers.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -139,7 +139,7 @@
                 "order": "8",
                 "name": "Google ACE: Implementing Google Cloud Storage",
                 "desc": "Object Lifecycle Management, storage buckets, storage classes, naming. Migrate\n                database to Cloud SQL.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -149,7 +149,7 @@
                 "order": "9",
                 "name": "Google ACE: Managing Google Cloud Storage",
                 "desc": "Cloud Storage buckets, BigQuery for storage estimation, Dataproc for jobs\n                status.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -159,7 +159,7 @@
                 "order": "10",
                 "name": "Google ACE: Implementing Google Kubernetes Engine",
                 "desc": "GKE clusters, security features, networking, monitoring and logging for\n                containerized apps.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -168,8 +168,8 @@
               {
                 "order": "11",
                 "name": "Google ACE: Managing Google Kubernetes Engine",
-                "desc": "Cluster management, access control, volumes, secrets, ConfigMaps, StatefulSets,\n                DaemonSets.",
-                "duration": "1 jam",
+                "desc": "Cluster management, access control, volumes, secrets, ConfigMaps, StatefulSets, DaemonSets.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -178,8 +178,8 @@
               {
                 "order": "12",
                 "name": "Google ACE: Implementing Google App Engine",
-                "desc": "Scalable hosting, gcloud deployment, Cloud Run, Cloud Functions, Pub/Sub\n                notifications.",
-                "duration": "1 jam",
+                "desc": "Scalable hosting, gcloud deployment, Cloud Run, Cloud Functions, Pub/Sub notifications.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -188,8 +188,8 @@
               {
                 "order": "13",
                 "name": "Google ACE: Managing Google App Engine",
-                "desc": "Traffic splitting, custom domains, SSL, app resources, scaling configurations,\n                versioning.",
-                "duration": "1 jam",
+                "desc": "Traffic splitting, custom domains, SSL, app resources, scaling configurations, versioning.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -199,7 +199,7 @@
                 "order": "14",
                 "name": "Google ACE: Google Cloud Operations Suite",
                 "desc": "Cloud Monitoring, Cloud Logging, Cloud Trace, Cloud Debugger for apps\n                performance.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -209,7 +209,7 @@
                 "order": "15",
                 "name": "Google ACE: Google Cloud Load Balancing",
                 "desc": "Autoscaling, traffic distribution, access control, SSL and TCP traffic\n                distribution.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -222,14 +222,14 @@
             "title": "Google Professional - Advanced Specialization",
             "meta": "Weeks 10–14 · Choose one according to career direction",
             "tags": [
-              "PILIH SATU"
+              "CHOOSE ONE"
             ],
             "courses": [
               {
                 "order": "A",
                 "name": "Google Cloud Digital Leader",
                 "desc": "Cloud concepts, GCP products, services and business applications. Suitable if you want\n                business/management direction.",
-                "duration": "23 jam",
+                "duration": "23 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner",
@@ -240,7 +240,7 @@
                 "order": "B",
                 "name": "Google Professional Data Engineer",
                 "desc": "Data pipelines, big data processing, GCP storage, analysis and ML tools. If\n                want to go into data engineering.",
-                "duration": "20 jam",
+                "duration": "20 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate",
@@ -251,7 +251,7 @@
                 "order": "C",
                 "name": "Google Professional Cloud DevOps Engineer",
                 "desc": "CI/CD pipelines, configuration management, secrets, deployment pipeline security.\n                If you want to go to DevOps.",
-                "duration": "23 jam",
+                "duration": "23 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate",
@@ -262,7 +262,7 @@
                 "order": "D",
                 "name": "Google Professional Cloud Developer",
                 "desc": "GCP application design, deployment, scalable development, cloud-native solutions.\n                If you want to go to backend dev.",
-                "duration": "27 jam",
+                "duration": "27 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate",
@@ -273,7 +273,7 @@
                 "order": "E",
                 "name": "Google Professional Cloud Architect",
                 "desc": "Cloud architecture design, infrastructure management, scalable solution\n                development. Highest level.",
-                "duration": "25 jam",
+                "duration": "25 hours",
                 "badges": [
                   "Certification Path",
                   "Advanced",
@@ -287,14 +287,14 @@
             "title": "GCP AI & Bonuses (Optional)",
             "meta": "Bonus free course · can be taken at any time",
             "tags": [
-              "GRATIS"
+              "FREE"
             ],
             "courses": [
               {
                 "order": "+",
                 "name": "Generative AI on GCP: An Introduction",
                 "desc": "AI development at GCP, GCP advantages for ML, image generation, NLP.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -303,8 +303,8 @@
               {
                 "order": "+",
                 "name": "Generative AI on GCP: Deep Dive Into Generative AI Studio",
-                "desc": "Language model training, tuning, performance evaluation, deployment,\n                speech-to-text.",
-                "duration": "2 jam",
+                "desc": "Language model training, tuning, performance evaluation, deployment, speech-to-text.",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -314,7 +314,7 @@
                 "order": "+",
                 "name": "Generative AI on GCP: Harnessing Generative AI with Vertex AI",
                 "desc": "Vertex AI, AI Studio, Vertex API, model garden, custom model creation, ethical\n                A.I.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -324,7 +324,7 @@
                 "order": "+",
                 "name": "Generative AI on GCP: Empowering ML Workflows with Vertex AI",
                 "desc": "End-to-end ML workflows, model deployment, training, data prep, features\n                engineering.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -334,7 +334,7 @@
                 "order": "+",
                 "name": "Generative AI on GCP: Building GenAI-powered Apps in GCP",
                 "desc": "Build GenAI app: environment setup, TensorFlow, training loop, dockerization,\n                deployment model.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -354,7 +354,7 @@
                 "order": "1",
                 "name": "Cloud Engineer Bootcamp",
                 "desc": "Intensive bootcamp to deepen the cloud. Focus on real projects, deployment,\n                CI/CD, and industry best practices.",
-                "duration": "1–3 bulan",
+                "duration": "1-3 months",
                 "badges": [
                   "Bootcamp",
                   "Intermediate"
@@ -383,7 +383,7 @@
                 "order": "1",
                 "name": "CLF-C02: AWS Certified Cloud Practitioner v1.1",
                 "desc": "AWS cloud foundation - security, billing, architecture. Perfect for beginners\n                Never used AWS. Includes 18 Courses.",
-                "duration": "9 jam",
+                "duration": "9 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -403,7 +403,7 @@
                 "order": "A",
                 "name": "SAA-C03: AWS Certified Solutions Architect - Associate",
                 "desc": "AWS architecture, deployment strategies, cloud services, data storage,\n                networking, security, cost management. Most popular line. Includes 16 Courses.",
-                "duration": "22 jam",
+                "duration": "22 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -413,7 +413,7 @@
                 "order": "B",
                 "name": "DVA-C02: AWS Certified Developer - Associate v1.1",
                 "desc": "Develop, deploy, debug cloud applications using AWS services and CI/CD workflows.\n                Suitable if you have a developer background. Includes 23 Courses.",
-                "duration": "37 jam",
+                "duration": "37 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -433,7 +433,7 @@
                 "order": "A",
                 "name": "SAP-C02: AWS Certified Solutions Architect - Professional",
                 "desc": "Advanced architecture, distributed systems, AWS best practices. The most level\n                high in Solutions Architect. Includes 21 Courses.",
-                "duration": "40 jam",
+                "duration": "40 hours",
                 "badges": [
                   "Certification Path",
                   "Advanced"
@@ -442,8 +442,8 @@
               {
                 "order": "B",
                 "name": "DOP-C02: AWS Certified DevOps Engineer - Professional",
-                "desc": "Deployment automation, application management, SDLC optimization, pipeline\n                development. Includes 20 Courses.",
-                "duration": "36 jam",
+                "desc": "Deployment automation, application management, SDLC optimization, pipeline development. Includes 20 Courses.",
+                "duration": "36 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -456,14 +456,14 @@
             "title": "AWS AI & Specialization",
             "meta": "Optional · can be taken parallel or after",
             "tags": [
-              "OPSIONAL"
+              "OPTIONAL"
             ],
             "courses": [
               {
                 "order": "+",
                 "name": "AIF-C01: AWS Certified AI Practitioner",
                 "desc": "ML basics, AI services, data preparation, model deployment. Includes 12 Courses.",
-                "duration": "7 jam",
+                "duration": "7 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -472,8 +472,8 @@
               {
                 "order": "+",
                 "name": "MLS-C01: AWS Certified Machine Learning - Specialty",
-                "desc": "Model building, training, tuning, deployment, cloud-based ML implementation.\n                Includes 18 Courses.",
-                "duration": "17 jam",
+                "desc": "Model building, training, tuning, deployment, cloud-based ML implementation. Includes 18 Courses.",
+                "duration": "17 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -483,7 +483,7 @@
                 "order": "+",
                 "name": "Generative AI on AWS: Getting Started (Free)",
                 "desc": "AWS GenAI services, foundational models, infrastructure for GenAI solutions.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -492,8 +492,8 @@
               {
                 "order": "+",
                 "name": "Generative AI on AWS: Building GenAI Models with Amazon Bedrock (Free)",
-                "desc": "Amazon Bedrock core concepts, model design, project evaluation, GenAI business\n                applications.",
-                "duration": "1 jam",
+                "desc": "Amazon Bedrock core concepts, model design, project evaluation, GenAI business applications.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -503,7 +503,7 @@
                 "order": "+",
                 "name": "Generative AI on AWS: Building GenAI Models with Amazon SageMaker (Free)",
                 "desc": "GANs, VAEs, optimization, transfer learning, deployment, monitoring in SageMaker.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -513,7 +513,7 @@
                 "order": "+",
                 "name": "Generative AI on AWS: Creating Intelligent Chatbots (Free)",
                 "desc": "Amazon Lex and Polly, context-aware conversations, sentiment analysis.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -523,7 +523,7 @@
                 "order": "+",
                 "name": "Generative AI on AWS: Generating Code with Amazon CodeWhisperer (Free)",
                 "desc": "Setup, automated code generation, software optimization, security configuration.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -532,8 +532,8 @@
               {
                 "order": "+",
                 "name": "Generative AI on AWS: Generating Speech with Amazon Polly (Free)",
-                "desc": "Natural speech generation, voice customization, SSML, secure usage, cost\n                optimization.",
-                "duration": "1 jam",
+                "desc": "Natural speech generation, voice customization, SSML, secure usage, cost optimization.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -543,7 +543,7 @@
                 "order": "+",
                 "name": "Generative AI on AWS: Deploying & Managing GenAI Services on AWS (Free)",
                 "desc": "AWS deployment services for GenAI. Data optimization, model training, security\n                with SageMaker.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -572,7 +572,7 @@
                 "order": "1",
                 "name": "AZ-900: Microsoft Azure Fundamentals v1.1",
                 "desc": "Azure cloud architecture, core services, compliance, governance, cost management.\n                Start here before all the rest of Azure. Includes 19 Courses.",
-                "duration": "28 jam",
+                "duration": "28 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -581,8 +581,8 @@
               {
                 "order": "2",
                 "name": "MS-900: Microsoft 365 Fundamentals v1.1",
-                "desc": "Cloud services, productivity tools, security, compliance, collaboration features.\n                Includes 10 Courses.",
-                "duration": "7 jam",
+                "desc": "Cloud services, productivity tools, security, compliance, collaboration features. Includes 10 Courses.",
+                "duration": "7 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -591,8 +591,8 @@
               {
                 "order": "3",
                 "name": "DP-900: Microsoft Azure Data Fundamentals v1.1",
-                "desc": "Cloud data services, analytics solutions, business intelligence, core data\n                concepts. Includes 24 Courses.",
-                "duration": "23 jam",
+                "desc": "Cloud data services, analytics solutions, business intelligence, core data concepts. Includes 24 Courses.",
+                "duration": "23 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -601,8 +601,8 @@
               {
                 "order": "4",
                 "name": "AI-900: Azure AI Fundamentals",
-                "desc": "Azure Machine Learning, ML techniques, NLP workloads, conversational AI. Includes\n                15 Courses.",
-                "duration": "21 jam",
+                "desc": "Azure Machine Learning, ML techniques, NLP workloads, conversational AI. Includes 15 Courses.",
+                "duration": "21 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -622,7 +622,7 @@
                 "order": "A",
                 "name": "AZ-104: Microsoft Azure Administrator",
                 "desc": "Resource management, virtual networks, monitoring, backup solutions, cloud\n                security. Suitable for cloud admins. Includes 20 Courses.",
-                "duration": "22 jam",
+                "duration": "22 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -632,7 +632,7 @@
                 "order": "B",
                 "name": "AZ-204: Developing Solutions for Microsoft Azure",
                 "desc": "Cloud app development, testing, maintenance, scalable solutions. Suitable for\n                developers. Includes 30 Courses.",
-                "duration": "29 jam",
+                "duration": "29 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -641,8 +641,8 @@
               {
                 "order": "C",
                 "name": "AZ-700: Microsoft Certified Azure Network Engineer Associate",
-                "desc": "Design, implement, manage Azure networking - hybrid connectivity, routing,\n                network security. Includes 21 Courses.",
-                "duration": "28 jam",
+                "desc": "Design, implement, manage Azure networking - hybrid connectivity, routing, network security. Includes 21 Courses.",
+                "duration": "28 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -652,7 +652,7 @@
                 "order": "D",
                 "name": "AZ-500: Microsoft Certified Azure Security Engineer Associate v1.1",
                 "desc": "Security controls, identity management, cloud infrastructure security, threats\n                response. Includes 12 Courses.",
-                "duration": "23 jam",
+                "duration": "23 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -662,7 +662,7 @@
                 "order": "E",
                 "name": "DP-100: Designing and Implementing a Data Science Solution on Azure",
                 "desc": "Machine learning models and data analytics in Azure. Includes 20 Courses.",
-                "duration": "22 jam",
+                "duration": "22 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -681,8 +681,8 @@
               {
                 "order": "A",
                 "name": "AZ-305: Designing Microsoft Azure Infrastructure Solutions",
-                "desc": "Governance, security, data storage, business continuity solutions. Includes 18\n                Courses.",
-                "duration": "20 jam",
+                "desc": "Governance, security, data storage, business continuity solutions. Includes 18 Courses.",
+                "duration": "20 hours",
                 "badges": [
                   "Certification Path",
                   "Advanced"
@@ -692,7 +692,7 @@
                 "order": "B",
                 "name": "AZ-400: Designing and Implementing Microsoft DevOps Solutions",
                 "desc": "CI/CD, automation, infrastructure as code, monitoring. Advanced DevOps level\n                Azure. Includes 16 Courses.",
-                "duration": "23 jam",
+                "duration": "23 hours",
                 "badges": [
                   "Certification Path",
                   "Advanced"
@@ -702,17 +702,17 @@
           },
           {
             "num": "+",
-            "title": "Azure AI & Bonus Gratis",
-            "meta": "Bisa diambil kapan aja · semua gratis",
+            "title": "Azure AI & Free Bonus",
+            "meta": "Can be taken anytime · all free",
             "tags": [
-              "GRATIS"
+              "FREE"
             ],
             "courses": [
               {
                 "order": "+",
                 "name": "Introduction to Generative AI on Azure",
-                "desc": "Azure OpenAI, Bot, ML services. Chatbot creation, personalized marketing, model\n                tuning.",
-                "duration": "1 jam",
+                "desc": "Azure OpenAI, Bot, ML services. Chatbot creation, personalized marketing, model tuning.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -721,8 +721,8 @@
               {
                 "order": "+",
                 "name": "Generative AI with Azure OpenAI",
-                "desc": "Models, practical uses, text answering, pricing, limitations, future Azure\n                OpenAI.",
-                "duration": "1 jam",
+                "desc": "Models, practical uses, text answering, pricing, limitations, future Azure OpenAI.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -731,8 +731,8 @@
               {
                 "order": "+",
                 "name": "Deep Dive Into Generative AI with Azure OpenAI",
-                "desc": "Architecture, OpenAI Studio, model customization, text & image generation,\n                integration.",
-                "duration": "2 jam",
+                "desc": "Architecture, OpenAI Studio, model customization, text & image generation, integration.",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -741,8 +741,8 @@
               {
                 "order": "+",
                 "name": "Generative AI & the Azure Bot AI Service",
-                "desc": "Smart chatbots dengan GenAI dan Copilot Studio. CLU models, Cognitive Services.",
-                "duration": "1 jam",
+                "desc": "Smart chatbots with GenAI and Copilot Studio. CLU models, Cognitive Services.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -757,12 +757,12 @@
       {
         "id": "k8s",
         "title": "Kubernetes",
-        "description": "Container orchestration · Wajib untuk cloud engineer modern · Platform-agnostic",
+        "description": "Container orchestration · Must-have for modern cloud engineers · Platform-agnostic",
         "phases": [
           {
             "num": "01",
             "title": "Certified Kubernetes Administrator (CKA) 2024",
-            "meta": "Ambil ini setelah paham salah satu cloud platform",
+            "meta": "Take this after understanding one cloud platform",
             "tags": [
               "PAID"
             ],
@@ -770,8 +770,8 @@
               {
                 "order": "1",
                 "name": "Certified Kubernetes Administrator (CKA) 2024",
-                "desc": "Manage, scale, deploy containerized workloads dengan Kubernetes di cloud-native\n                environment. Sertifikasi paling dikenal untuk container orchestration. Includes 12 Courses.",
-                "duration": "14 jam",
+                "desc": "Manage, scale, deploy containerized workloads with Kubernetes in a cloud-native environment. Most recognized certification for container orchestration. Includes 12 Courses.",
+                "duration": "14 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -782,7 +782,7 @@
           {
             "num": "02",
             "title": "Certified Kubernetes Application Developer (CKAD)",
-            "meta": "Lanjutan CKA · fokus ke developer side",
+            "meta": "CKA Continuation · focused on developer side",
             "tags": [
               "PAID"
             ],
@@ -790,8 +790,8 @@
               {
                 "order": "2",
                 "name": "Certified Kubernetes Application Developer (CKAD)",
-                "desc": "Design, build, deploy cloud-native applications pakai Kubernetes primitives dan\n                scalable microservice architecture. Includes 16 Courses.",
-                "duration": "18 jam",
+                "desc": "Design, build, deploy cloud-native applications using Kubernetes primitives and scalable microservice architecture. Includes 16 Courses.",
+                "duration": "18 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -805,13 +805,13 @@
       },
       {
         "id": "multi",
-        "title": "Multi-Cloud, CompTIA & Lainnya",
-        "description": "Security, cross-platform, Oracle · Ambil setelah minimal satu platform selesai",
+        "title": "Multi-Cloud, CompTIA & Others",
+        "description": "Security, cross-platform, Oracle · Take after completing at least one platform",
         "phases": [
           {
             "num": "🔒",
             "title": "Security - Cloud & Platform Agnostic",
-            "meta": "Untuk yang mau spesialisasi ke cloud security",
+            "meta": "For those specializing in cloud security",
             "tags": [
               "PAID"
             ],
@@ -819,8 +819,8 @@
               {
                 "order": "1",
                 "name": "CLO-002: CompTIA Cloud Essentials+",
-                "desc": "Cloud fundamentals, business impact, organizational implementation, adoption\n                strategies. Includes 16 Courses.",
-                "duration": "20 jam",
+                "desc": "Cloud fundamentals, business impact, organizational implementation, adoption strategies. Includes 16 Courses.",
+                "duration": "20 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -829,8 +829,8 @@
               {
                 "order": "2",
                 "name": "CV0-004: CompTIA Cloud+",
-                "desc": "Cloud infrastructure management, configuration, deployment, troubleshooting.\n                Includes 20 Courses.",
-                "duration": "28 jam",
+                "desc": "Cloud infrastructure management, configuration, deployment, troubleshooting. Includes 20 Courses.",
+                "duration": "28 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -839,8 +839,8 @@
               {
                 "order": "3",
                 "name": "Certified Cloud Security Professional - CCSP",
-                "desc": "Cloud architecture, data security, identity management, cloud compliance.\n                Includes 22 Courses.",
-                "duration": "10 jam",
+                "desc": "Cloud architecture, data security, identity management, cloud compliance. Includes 22 Courses.",
+                "duration": "10 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -851,7 +851,7 @@
           {
             "num": "☁️",
             "title": "Multi-Cloud & Cross-Platform",
-            "meta": "Setelah mahir satu platform · ekspansi ke semua cloud",
+            "meta": "After mastering one platform · expand to all clouds",
             "tags": [
               "PAID"
             ],
@@ -859,8 +859,8 @@
               {
                 "order": "1",
                 "name": "The Generative AI Cloud Odyssey: Exploring AWS, Azure, and GCP",
-                "desc": "GenAI di semua 3 platform sekaligus - AWS, Azure, GCP. Hands-on projects.\n                Includes 48 Courses!",
-                "duration": "32 jam",
+                "desc": "GenAI on all 3 platforms simultaneously - AWS, Azure, GCP. Hands-on projects. Includes 48 Courses!",
+                "duration": "32 hours",
                 "badges": [
                   "Skill Path",
                   "Intermediate",
@@ -872,7 +872,7 @@
           {
             "num": "🔴",
             "title": "Oracle Cloud Infrastructure (OCI)",
-            "meta": "Platform enterprise Oracle · niche tapi dicari perusahaan besar",
+            "meta": "Oracle enterprise platform · niche but sought after by large companies",
             "tags": [
               "PAID"
             ],
@@ -880,8 +880,8 @@
               {
                 "order": "1",
                 "name": "1Z0-1085-25: Oracle Cloud Infrastructure 2025 Foundations Associate",
-                "desc": "OCI foundation untuk tech & non-tech professionals baru ke OCI. Includes 21\n                Courses.",
-                "duration": "25 jam",
+                "desc": "OCI foundation for tech & non-tech professionals new to OCI. Includes 21 Courses.",
+                "duration": "25 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -890,8 +890,8 @@
               {
                 "order": "2",
                 "name": "1Z0-1072-25: Oracle Cloud Infrastructure 2025 Architect Associate",
-                "desc": "IAM, Networking, Compute, Storage, secure scalable infrastructure, hands-on labs.\n                Includes 23 Courses.",
-                "duration": "22 jam",
+                "desc": "IAM, Networking, Compute, Storage, secure scalable infrastructure, hands-on labs. Includes 23 Courses.",
+                "duration": "22 hours",
                 "badges": [
                   "Certification Path",
                   "Intermediate"
@@ -900,8 +900,8 @@
               {
                 "order": "3",
                 "name": "1Z0-1195-25: Oracle Data Platform 2025 Foundations Associate",
-                "desc": "Autonomous Database, Data Lakehouse, Analytics, OCI data management. Includes 20\n                Courses.",
-                "duration": "23 jam",
+                "desc": "Autonomous Database, Data Lakehouse, Analytics, OCI data management. Includes 20 Courses.",
+                "duration": "23 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -910,8 +910,8 @@
               {
                 "order": "4",
                 "name": "1Z0-1122-25: Oracle Cloud Infrastructure 2025 AI Foundations Associate",
-                "desc": "AI & ML fundamentals di OCI. Practical OCI AI concepts. Includes 23 Courses.",
-                "duration": "25 jam",
+                "desc": "AI & ML fundamentals in OCI. Practical OCI AI concepts. Includes 23 Courses.",
+                "duration": "25 hours",
                 "badges": [
                   "Certification Path",
                   "Beginner Friendly"
@@ -922,16 +922,16 @@
           {
             "num": "🆓",
             "title": "CompTIA Cloud Essentials+ - Free Modules",
-            "meta": "Semua gratis · bisa diambil paralel kapan aja",
+            "meta": "All free · can be taken in parallel anytime",
             "tags": [
-              "GRATIS"
+              "FREE"
             ],
             "courses": [
               {
                 "order": "+",
                 "name": "Essential Cloud Principles",
                 "desc": "Cloud essentials, deployment models, cloud infrastructure components.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -941,7 +941,7 @@
                 "order": "+",
                 "name": "Essential Cloud Networking",
                 "desc": "Cloud migration strategies, VPC management, DMZ setup, SDN implementation.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -951,7 +951,7 @@
                 "order": "+",
                 "name": "Security Considerations",
                 "desc": "IAM, single sign-on, multi-factor authentication, federated authentication.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -961,7 +961,7 @@
                 "order": "+",
                 "name": "Cloud Storage Technologies",
                 "desc": "Cloud storage systems, hot/cold storage, data protection, replication, RAID.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -970,8 +970,8 @@
               {
                 "order": "+",
                 "name": "DevOps in the Cloud",
-                "desc": "DevOps best practices, CI/CD pipelines, automation untuk cloud deployment.",
-                "duration": "1 jam",
+                "desc": "DevOps best practices, CI/CD pipelines, automation for cloud deployment.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -981,7 +981,7 @@
                 "order": "+",
                 "name": "Cloud Governance & Securing Data",
                 "desc": "Policy-based access control, data sovereignty, vulnerability assessment.",
-                "duration": "2 jam",
+                "duration": "2 hours",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -990,8 +990,8 @@
               {
                 "order": "+",
                 "name": "Cloud Design Considerations",
-                "desc": "High availability, disaster recovery strategies, benchmarking, failover\n                scenarios.",
-                "duration": "1 jam",
+                "desc": "High availability, disaster recovery strategies, benchmarking, failover scenarios.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1001,7 +1001,7 @@
                 "order": "+",
                 "name": "Cloud Native Apps & Cloud Data Analytics",
                 "desc": "Cloud-native architecture, containerization, microservices, big data management.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1011,7 +1011,7 @@
                 "order": "+",
                 "name": "Cloud Connectivity & Load Balancing",
                 "desc": "Load balancer architectures, disaster recovery strategies, resource utilization.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Beginner"
@@ -1020,8 +1020,8 @@
               {
                 "order": "+",
                 "name": "Utilizing Cloud Services",
-                "desc": "IoT, blockchain, VDI di cloud. Digital marketing, self-service cloud, cost\n                management.",
-                "duration": "1 jam",
+                "desc": "IoT, blockchain, VDI in the cloud. Digital marketing, self-service cloud, cost management.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1030,8 +1030,8 @@
               {
                 "order": "+",
                 "name": "Operations within Cloud",
-                "desc": "AWS services untuk data management, replication, storage, backup, autoscaling.",
-                "duration": "1 jam",
+                "desc": "AWS services for data management, replication, storage, backup, autoscaling.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1040,8 +1040,8 @@
               {
                 "order": "+",
                 "name": "Cloud Migration Strategies",
-                "desc": "Migration types, best practices, hybrid cloud approaches untuk successful\n                migration.",
-                "duration": "1 jam",
+                "desc": "Migration types, best practices, hybrid cloud approaches for successful migration.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1051,7 +1051,7 @@
                 "order": "+",
                 "name": "Gap Analysis & Cloud Assessment",
                 "desc": "Cloud transformation stages, technology stack assessment, adoption strategies.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1061,7 +1061,7 @@
                 "order": "+",
                 "name": "Cloud Licensing Models & Risk Mitigation",
                 "desc": "Cloud pricing factors, risk mitigation strategies, compliance implementation.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1071,7 +1071,7 @@
                 "order": "+",
                 "name": "Contracting with Cloud Service Providers",
                 "desc": "Cloud costs, licensing models, contract negotiation strategies.",
-                "duration": "1 jam",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
@@ -1080,8 +1080,8 @@
               {
                 "order": "+",
                 "name": "Cloud Adoption to Enhance Business Value",
-                "desc": "Cloud SLAs, POC creation, cloud adoption planning untuk business value.",
-                "duration": "1 jam",
+                "desc": "Cloud SLAs, POC creation, cloud adoption planning for business value.",
+                "duration": "1 hour",
                 "badges": [
                   "FREE ",
                   "Intermediate"
