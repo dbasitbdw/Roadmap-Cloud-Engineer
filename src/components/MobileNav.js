@@ -1,9 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 import styles from "./MobileNav.module.css";
 
 export default function MobileNav({ activeTab, setActiveTab }) {
   const [lastBelajarTab, setLastBelajarTab] = useState("google");
+  const { lang, mounted } = useLanguage();
+
+  if (!mounted) return null;
 
   const isPraktik = activeTab === "praktik";
 
@@ -50,7 +54,7 @@ export default function MobileNav({ activeTab, setActiveTab }) {
           onClick={() => handleModeChange("belajar")}
         >
           <div className={styles.bnavIcon}>📖</div>
-          <span className={styles.bnavLabel}>Belajar</span>
+          <span className={styles.bnavLabel}>{lang === 'id' ? 'Belajar' : 'Learn'}</span>
           <div className={styles.bnavDot}></div>
         </button>
 
@@ -59,7 +63,7 @@ export default function MobileNav({ activeTab, setActiveTab }) {
           onClick={() => handleModeChange("praktik")}
         >
           <div className={styles.bnavIcon}>💻</div>
-          <span className={styles.bnavLabel}>Praktik</span>
+          <span className={styles.bnavLabel}>{lang === 'id' ? 'Praktik' : 'Practice'}</span>
           <div className={styles.bnavDot}></div>
         </button>
       </div>

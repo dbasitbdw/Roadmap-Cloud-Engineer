@@ -5,6 +5,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.welcomeMsg {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.langSwitch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-color);
+  padding: 4px 8px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.langBtn {
+  background: none;
+  border: none;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.langBtn:hover {
+  color: var(--text-primary);
+}
+
+.langBtn.active {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-primary);
+}
+
+.langSep {
+  color: var(--border-color);
+  font-size: 0.8rem;
 }
 
 .logo {
