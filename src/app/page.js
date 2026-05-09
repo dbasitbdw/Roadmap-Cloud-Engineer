@@ -5,6 +5,7 @@ import PlatformTabs from "@/components/PlatformTabs";
 import PlatformSection from "@/components/PlatformSection";
 import PraktikSection from "@/components/PraktikSection";
 import MobileNav from "@/components/MobileNav";
+import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 import data from "@/data.json";
 
@@ -31,6 +32,7 @@ export default function Home() {
         </div>
       ))}
 
+      <Footer />
       <MobileNav activeTab={activeTab} setActiveTab={setActiveTab} />
     </main>
   );
