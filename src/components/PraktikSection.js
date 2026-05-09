@@ -16,9 +16,27 @@ export default function PraktikSection({ platform }) {
             <h3 className={styles.cardTitle}>{card.title}</h3>
             <p className={styles.cardSub}>{card.sub}</p>
             <ul className={styles.list}>
-              {card.list.map((item, j) => (
-                <li key={j}>{item}</li>
-              ))}
+              {card.list.map((item, j) => {
+                const prefixes = ['FREE', 'GCP', 'AWS', 'AZURE', 'K8S', 'PROJECT'];
+                let matchedPrefix = null;
+                let text = item;
+                for (let p of prefixes) {
+                  if (text.startsWith(p)) {
+                    matchedPrefix = p;
+                    text = text.substring(p.length).trim();
+                    break;
+                  }
+                }
+                return (
+                  <li key={j}>
+                    {matchedPrefix ? (
+                      <><span className={`${styles.badge} ${styles['badge' + matchedPrefix]}`}>{matchedPrefix}</span> {text}</>
+                    ) : (
+                      item
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}

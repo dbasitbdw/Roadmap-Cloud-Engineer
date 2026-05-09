@@ -20,7 +20,7 @@
                 "desc": "Basic concepts of cloud computing - AWS, Azure, GCP overview. Really start from here.",
                 "duration": "<1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner",
                   "With Certificate"
                 ]
@@ -71,7 +71,7 @@
                 "desc": "Virtual Machines, Kubernetes, Cloud Functions. Account setup, console navigation,\n                billing & pricing.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -81,7 +81,7 @@
                 "desc": "Cloud Shell, database services, BigQuery for efficient development.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -91,7 +91,7 @@
                 "desc": "Manage authorization with Google Cloud IAM. Custom roles and IAM audit logs.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -101,7 +101,7 @@
                 "desc": "Hierarchically manage resources. Labels, tags, project migration, audit logs.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -111,7 +111,7 @@
                 "desc": "VPC networks and subnets. Cloud VPN, Deployment Manager templates, subnets\n                management.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -121,7 +121,7 @@
                 "desc": "Create and manage Virtual Machine instances, sole-tenant nodes, managed instances\n                groups.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -131,7 +131,7 @@
                 "desc": "Manage VM instances, OS inventory management, snapshots and images, metadata\n                servers.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -141,7 +141,7 @@
                 "desc": "Object Lifecycle Management, storage buckets, storage classes, naming. Migrate\n                database to Cloud SQL.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -151,7 +151,7 @@
                 "desc": "Cloud Storage buckets, BigQuery for storage estimation, Dataproc for jobs\n                status.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -161,7 +161,7 @@
                 "desc": "GKE clusters, security features, networking, monitoring and logging for\n                containerized apps.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -171,7 +171,7 @@
                 "desc": "Cluster management, access control, volumes, secrets, ConfigMaps, StatefulSets,\n                DaemonSets.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -181,7 +181,7 @@
                 "desc": "Scalable hosting, gcloud deployment, Cloud Run, Cloud Functions, Pub/Sub\n                notifications.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -191,7 +191,7 @@
                 "desc": "Traffic splitting, custom domains, SSL, app resources, scaling configurations,\n                versioning.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -201,7 +201,7 @@
                 "desc": "Cloud Monitoring, Cloud Logging, Cloud Trace, Cloud Debugger for apps\n                performance.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -211,7 +211,7 @@
                 "desc": "Autoscaling, traffic distribution, access control, SSL and TCP traffic\n                distribution.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -296,7 +296,7 @@
                 "desc": "AI development at GCP, GCP advantages for ML, image generation, NLP.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -306,7 +306,7 @@
                 "desc": "Language model training, tuning, performance evaluation, deployment,\n                speech-to-text.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -316,7 +316,7 @@
                 "desc": "Vertex AI, AI Studio, Vertex API, model garden, custom model creation, ethical\n                A.I.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -326,7 +326,7 @@
                 "desc": "End-to-end ML workflows, model deployment, training, data prep, features\n                engineering.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -336,7 +336,7 @@
                 "desc": "Build GenAI app: environment setup, TensorFlow, training loop, dockerization,\n                deployment model.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -485,7 +485,7 @@
                 "desc": "AWS GenAI services, foundational models, infrastructure for GenAI solutions.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -495,7 +495,7 @@
                 "desc": "Amazon Bedrock core concepts, model design, project evaluation, GenAI business\n                applications.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -505,7 +505,7 @@
                 "desc": "GANs, VAEs, optimization, transfer learning, deployment, monitoring in SageMaker.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -515,7 +515,7 @@
                 "desc": "Amazon Lex and Polly, context-aware conversations, sentiment analysis.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -525,7 +525,7 @@
                 "desc": "Setup, automated code generation, software optimization, security configuration.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -535,7 +535,7 @@
                 "desc": "Natural speech generation, voice customization, SSML, secure usage, cost\n                optimization.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -545,7 +545,7 @@
                 "desc": "AWS deployment services for GenAI. Data optimization, model training, security\n                with SageMaker.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -714,7 +714,7 @@
                 "desc": "Azure OpenAI, Bot, ML services. Chatbot creation, personalized marketing, model\n                tuning.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -724,7 +724,7 @@
                 "desc": "Models, practical uses, text answering, pricing, limitations, future Azure\n                OpenAI.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -734,7 +734,7 @@
                 "desc": "Architecture, OpenAI Studio, model customization, text & image generation,\n                integration.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -744,7 +744,7 @@
                 "desc": "Smart chatbots dengan GenAI dan Copilot Studio. CLU models, Cognitive Services.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -933,7 +933,7 @@
                 "desc": "Cloud essentials, deployment models, cloud infrastructure components.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -943,7 +943,7 @@
                 "desc": "Cloud migration strategies, VPC management, DMZ setup, SDN implementation.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -953,7 +953,7 @@
                 "desc": "IAM, single sign-on, multi-factor authentication, federated authentication.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -963,7 +963,7 @@
                 "desc": "Cloud storage systems, hot/cold storage, data protection, replication, RAID.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -973,7 +973,7 @@
                 "desc": "DevOps best practices, CI/CD pipelines, automation untuk cloud deployment.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -983,7 +983,7 @@
                 "desc": "Policy-based access control, data sovereignty, vulnerability assessment.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -993,7 +993,7 @@
                 "desc": "High availability, disaster recovery strategies, benchmarking, failover\n                scenarios.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1003,7 +1003,7 @@
                 "desc": "Cloud-native architecture, containerization, microservices, big data management.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1013,7 +1013,7 @@
                 "desc": "Load balancer architectures, disaster recovery strategies, resource utilization.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -1023,7 +1023,7 @@
                 "desc": "IoT, blockchain, VDI di cloud. Digital marketing, self-service cloud, cost\n                management.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1033,7 +1033,7 @@
                 "desc": "AWS services untuk data management, replication, storage, backup, autoscaling.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1043,7 +1043,7 @@
                 "desc": "Migration types, best practices, hybrid cloud approaches untuk successful\n                migration.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1053,7 +1053,7 @@
                 "desc": "Cloud transformation stages, technology stack assessment, adoption strategies.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1063,7 +1063,7 @@
                 "desc": "Cloud pricing factors, risk mitigation strategies, compliance implementation.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1073,7 +1073,7 @@
                 "desc": "Cloud costs, licensing models, contract negotiation strategies.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1083,7 +1083,7 @@
                 "desc": "Cloud SLAs, POC creation, cloud adoption planning untuk business value.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -1095,92 +1095,92 @@
       },
       {
         "id": "praktik",
-        "title": "Latihan Praktik - Hands-On Labs",
-        "description": "Deploy yang beneran · Bukan cuma nonton · Jadikan porto",
+        "title": "Practice Labs - Hands-On",
+        "description": "Real deployments · Not just watching · Build your portfolio",
         "phases": [],
         "praktikGrid": [
           {
             "title": "Google Cloud Labs",
-            "sub": "Free tier $300 · 90 hari · Console + CLI",
+            "sub": "Free tier $300 · 90 days · Console + CLI",
             "list": [
-              "FREESetup GCP account + billing alert",
-              "GCPDeploy VM pakai Compute Engine",
-              "GCPBuat Cloud Storage bucket + upload file",
-              "GCPDeploy static site ke Cloud Storage + CDN",
-              "GCPBuat GKE cluster + deploy container",
-              "GCPSetup IAM roles + service account",
-              "GCPCloud Run: deploy Python Flask app",
-              "GCPCloud Monitoring + alerting policy"
+              "FREE Setup GCP account + billing alert",
+              "GCP Deploy VM using Compute Engine",
+              "GCP Create Cloud Storage bucket + upload file",
+              "GCP Deploy static site to Cloud Storage + CDN",
+              "GCP Create GKE cluster + deploy container",
+              "GCP Setup IAM roles + service account",
+              "GCP Cloud Run: deploy Python Flask app",
+              "GCP Cloud Monitoring + alerting policy"
             ]
           },
           {
             "title": "AWS Labs",
-            "sub": "Free tier 12 bulan · AWS Console + CLI",
+            "sub": "Free tier 12 months · AWS Console + CLI",
             "list": [
-              "FREESetup AWS account + billing alarm",
-              "AWSLaunch EC2 instance + SSH masuk",
-              "AWSS3 bucket + static website hosting",
-              "AWSLambda function + API Gateway",
-              "AWSRDS setup + connect dari EC2",
-              "AWSIAM user + policy + MFA",
-              "AWSCloudFormation: deploy stack dari template",
-              "AWSECS + Fargate: deploy Docker container"
+              "FREE Setup AWS account + billing alarm",
+              "AWS Launch EC2 instance + SSH login",
+              "AWS S3 bucket + static website hosting",
+              "AWS Lambda function + API Gateway",
+              "AWS RDS setup + connect from EC2",
+              "AWS IAM user + policy + MFA",
+              "AWS CloudFormation: deploy stack from template",
+              "AWS ECS + Fargate: deploy Docker container"
             ]
           },
           {
             "title": "Azure Labs",
-            "sub": "Free $200 kredit 30 hari · Portal + CLI",
+            "sub": "Free $200 credit 30 days · Portal + CLI",
             "list": [
-              "FREESetup Azure account + resource group",
-              "AZUREDeploy Linux VM + SSH",
-              "AZUREAzure Blob Storage + static website",
-              "AZUREAzure App Service: deploy web app",
-              "AZUREAzure Functions: serverless trigger",
-              "AZUREAzure AD: setup user + role assignment",
-              "AZUREAKS: deploy Kubernetes cluster",
-              "AZUREAzure Monitor + Log Analytics"
+              "FREE Setup Azure account + resource group",
+              "AZURE Deploy Linux VM + SSH",
+              "AZURE Azure Blob Storage + static website",
+              "AZURE Azure App Service: deploy web app",
+              "AZURE Azure Functions: serverless trigger",
+              "AZURE Azure AD: setup user + role assignment",
+              "AZURE AKS: deploy Kubernetes cluster",
+              "AZURE Azure Monitor + Log Analytics"
             ]
           },
           {
             "title": "Kubernetes Labs",
-            "sub": "Minikube lokal + Play with K8s (free)",
+            "sub": "Local Minikube + Play with K8s (free)",
             "list": [
-              "FREEInstall Minikube + kubectl di lokal",
-              "K8SDeploy pod + service + expose endpoint",
-              "K8SDeployment + ReplicaSet + rolling update",
-              "K8SConfigMap + Secret management",
-              "K8SPersistent Volume + PVC",
-              "K8SIngress controller + domain routing",
-              "K8SHPA: horizontal pod autoscaler",
-              "K8SNamespace + RBAC setup"
+              "FREE Install Minikube + kubectl locally",
+              "K8S Deploy pod + service + expose endpoint",
+              "K8S Deployment + ReplicaSet + rolling update",
+              "K8S ConfigMap + Secret management",
+              "K8S Persistent Volume + PVC",
+              "K8S Ingress controller + domain routing",
+              "K8S HPA: horizontal pod autoscaler",
+              "K8S Namespace + RBAC setup"
             ]
           },
           {
             "title": "Tools & DevOps Wajib",
-            "sub": "Kuasai ini dulu sebelum apply kerja",
+            "sub": "Master these before applying for jobs",
             "list": [
-              "FREEGit + GitHub: branching, PR, merge",
-              "FREEDocker: build image + push ke registry",
-              "FREETerraform: IaC buat GCP/AWS resource",
-              "FREEGitHub Actions: CI/CD pipeline sederhana",
-              "FREELinux CLI: ss, netstat, top, df, journalctl",
-              "FREEPython: boto3 (AWS) / google-cloud SDK",
-              "FREENginx / Caddy: reverse proxy setup",
-              "FREEPrometheus + Grafana: monitoring stack"
+              "FREE Git + GitHub: branching, PR, merge",
+              "FREE Docker: build image + push to registry",
+              "FREE Terraform: IaC for GCP/AWS resources",
+              "FREE GitHub Actions: simple CI/CD pipeline",
+              "FREE Linux CLI: ss, netstat, top, df, journalctl",
+              "FREE Python: boto3 (AWS) / google-cloud SDK",
+              "FREE Nginx / Caddy: reverse proxy setup",
+              "FREE Prometheus + Grafana: monitoring stack"
             ]
           },
           {
             "title": "Project Portofolio",
-            "sub": "Build ini → taruh di GitHub → tulis di LinkedIn",
+            "sub": "Build this → put on GitHub → write on LinkedIn",
             "list": [
-              "PROJECTStatic site + CDN + custom domain di GCP",
-              "PROJECTServerless API: Lambda + API GW + DynamoDB",
-              "PROJECTMicroservice 3-tier deploy di Kubernetes",
-              "PROJECTCI/CD pipeline full: GitHub → Docker → Cloud",
-              "PROJECTInfrastructure as Code: semua pakai Terraform",
-              "PROJECTMonitoring stack: Prometheus + Grafana + Alert",
-              "PROJECTMulti-cloud: sama app, deploy di 3 platform",
-              "PROJECTBlog/portfolio site deploy pakai cloud native"
+              "PROJECT Static site + CDN + custom domain on GCP",
+              "PROJECT Serverless API: Lambda + API GW + DynamoDB",
+              "PROJECT 3-tier microservice deploy on Kubernetes",
+              "PROJECT Full CI/CD pipeline: GitHub → Docker → Cloud",
+              "PROJECT Infrastructure as Code: everything with Terraform",
+              "PROJECT Monitoring stack: Prometheus + Grafana + Alert",
+              "PROJECT Multi-cloud: same app, deployed on 3 platforms",
+              "PROJECT Blog/portfolio site deployed via cloud native"
             ]
           }
         ],
@@ -1188,32 +1188,32 @@
           {
             "num": "M1",
             "title": "Hello Cloud",
-            "desc": "Udah punya akun GCP/AWS, bisa login console, tau billing, pernah buka Cloud Shell.\n                 "
+            "desc": "Have GCP/AWS account, can login to console, know billing, opened Cloud Shell."
           },
           {
             "num": "M2",
             "title": "First Deploy",
-            "desc": "Udah pernah deploy sesuatu - VM, static site, atau function. Bisa akses hasilnya dari\n                browser.  "
+            "desc": "Have deployed something - VM, static site, or function. Can access results via browser."
           },
           {
             "num": "M3",
             "title": "Container Ready",
-            "desc": "Udah bisa build Docker image, push ke registry, dan deploy container di cloud atau\n                Kubernetes.  "
+            "desc": "Can build Docker image, push to registry, and deploy container on cloud or Kubernetes."
           },
           {
             "num": "M4",
             "title": "CI/CD Pipeline",
-            "desc": "Git push otomatis trigger build + deploy ke cloud. Pakai GitHub Actions atau cloud\n                native pipeline.  "
+            "desc": "Git push automatically triggers build + deploy to cloud. Using GitHub Actions or cloud native pipeline."
           },
           {
             "num": "M5",
             "title": "IaC Ready",
-            "desc": "Infrastructure dituliskan sebagai kode (Terraform/Pulumi). Bisa destroy + recreate\n                dalam menit.  "
+            "desc": "Infrastructure written as code (Terraform/Pulumi). Can destroy + recreate in minutes."
           },
           {
             "num": "M6",
-            "title": "Porto Siap Kerja",
-            "desc": "Minimal 3 project di GitHub + dokumentasi README. Monitoring jalan. Bisa explain ke\n                interviewer.  "
+            "title": "Job-Ready Portfolio",
+            "desc": "Minimum 3 projects on GitHub + README documentation. Monitoring works. Can explain to interviewers."
           }
         ]
       }
@@ -1240,7 +1240,7 @@
                 "desc": "Konsep dasar cloud computing - AWS, Azure, GCP overview. Mulai banget dari sini.",
                 "duration": "<1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner",
                   "With Certificate"
                 ]
@@ -1291,7 +1291,7 @@
                 "desc": "Virtual Machines, Kubernetes, Cloud Functions. Account setup, console navigation,\n                billing & pricing.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1301,7 +1301,7 @@
                 "desc": "Cloud Shell, database services, BigQuery untuk efficient development.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1311,7 +1311,7 @@
                 "desc": "Manage authorization dengan Google Cloud IAM. Custom roles dan IAM audit logs.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1321,7 +1321,7 @@
                 "desc": "Hierarchically manage resources. Labels, tags, project migration, audit logs.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1331,7 +1331,7 @@
                 "desc": "VPC networks dan subnets. Cloud VPN, Deployment Manager templates, subnet\n                management.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1341,7 +1341,7 @@
                 "desc": "Create dan manage Virtual Machine instances, sole-tenant nodes, managed instance\n                group.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1351,7 +1351,7 @@
                 "desc": "Manage VM instances, OS inventory management, snapshots dan images, metadata\n                server.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1361,7 +1361,7 @@
                 "desc": "Object Lifecycle Management, storage buckets, storage classes, naming. Migrate\n                database ke Cloud SQL.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1371,7 +1371,7 @@
                 "desc": "Cloud Storage buckets, BigQuery untuk estimasi storage, Dataproc untuk job\n                status.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1381,7 +1381,7 @@
                 "desc": "GKE clusters, security features, networking, monitoring dan logging untuk\n                containerized apps.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1391,7 +1391,7 @@
                 "desc": "Cluster management, access control, volumes, secrets, ConfigMaps, StatefulSets,\n                DaemonSets.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1401,7 +1401,7 @@
                 "desc": "Scalable hosting, gcloud deployment, Cloud Run, Cloud Functions, Pub/Sub\n                notifications.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1411,7 +1411,7 @@
                 "desc": "Traffic splitting, custom domains, SSL, app resources, scaling configurations,\n                versioning.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1421,7 +1421,7 @@
                 "desc": "Cloud Monitoring, Cloud Logging, Cloud Trace, Cloud Debugger untuk app\n                performance.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1431,7 +1431,7 @@
                 "desc": "Autoscaling, traffic distribution, access control, SSL dan TCP traffic\n                distribution.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -1516,7 +1516,7 @@
                 "desc": "AI development di GCP, GCP advantages untuk ML, image generation, NLP.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -1526,7 +1526,7 @@
                 "desc": "Language model training, tuning, performance evaluation, deployment,\n                speech-to-text.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1536,7 +1536,7 @@
                 "desc": "Vertex AI, AI Studio, Vertex API, model garden, custom model creation, ethical\n                AI.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1546,7 +1546,7 @@
                 "desc": "End-to-end ML workflows, model deployment, training, data prep, feature\n                engineering.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1556,7 +1556,7 @@
                 "desc": "Build GenAI app: environment setup, TensorFlow, training loop, dockerization,\n                model deployment.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -1705,7 +1705,7 @@
                 "desc": "AWS GenAI services, foundational models, infrastructure untuk GenAI solutions.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1715,7 +1715,7 @@
                 "desc": "Amazon Bedrock core concepts, model design, project evaluation, GenAI business\n                applications.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1725,7 +1725,7 @@
                 "desc": "GANs, VAEs, optimization, transfer learning, deployment, monitoring di SageMaker.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1735,7 +1735,7 @@
                 "desc": "Amazon Lex dan Polly, context-aware conversations, sentiment analysis.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1745,7 +1745,7 @@
                 "desc": "Setup, automated code generation, software optimization, security configuration.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1755,7 +1755,7 @@
                 "desc": "Natural speech generation, voice customization, SSML, secure usage, cost\n                optimization.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1765,7 +1765,7 @@
                 "desc": "AWS deployment services untuk GenAI. Data optimization, model training, security\n                dengan SageMaker.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -1934,7 +1934,7 @@
                 "desc": "Azure OpenAI, Bot, ML services. Chatbot creation, personalized marketing, model\n                tuning.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -1944,7 +1944,7 @@
                 "desc": "Models, practical uses, text answering, pricing, limitations, future Azure\n                OpenAI.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -1954,7 +1954,7 @@
                 "desc": "Architecture, OpenAI Studio, model customization, text & image generation,\n                integration.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -1964,7 +1964,7 @@
                 "desc": "Smart chatbots dengan GenAI dan Copilot Studio. CLU models, Cognitive Services.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -2153,7 +2153,7 @@
                 "desc": "Cloud essentials, deployment models, cloud infrastructure components.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -2163,7 +2163,7 @@
                 "desc": "Cloud migration strategies, VPC management, DMZ setup, SDN implementation.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -2173,7 +2173,7 @@
                 "desc": "IAM, single sign-on, multi-factor authentication, federated authentication.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2183,7 +2183,7 @@
                 "desc": "Cloud storage systems, hot/cold storage, data protection, replication, RAID.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -2193,7 +2193,7 @@
                 "desc": "DevOps best practices, CI/CD pipelines, automation untuk cloud deployment.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2203,7 +2203,7 @@
                 "desc": "Policy-based access control, data sovereignty, vulnerability assessment.",
                 "duration": "2 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2213,7 +2213,7 @@
                 "desc": "High availability, disaster recovery strategies, benchmarking, failover\n                scenarios.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2223,7 +2223,7 @@
                 "desc": "Cloud-native architecture, containerization, microservices, big data management.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2233,7 +2233,7 @@
                 "desc": "Load balancer architectures, disaster recovery strategies, resource utilization.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Beginner"
                 ]
               },
@@ -2243,7 +2243,7 @@
                 "desc": "IoT, blockchain, VDI di cloud. Digital marketing, self-service cloud, cost\n                management.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2253,7 +2253,7 @@
                 "desc": "AWS services untuk data management, replication, storage, backup, autoscaling.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2263,7 +2263,7 @@
                 "desc": "Migration types, best practices, hybrid cloud approaches untuk successful\n                migration.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2273,7 +2273,7 @@
                 "desc": "Cloud transformation stages, technology stack assessment, adoption strategies.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2283,7 +2283,7 @@
                 "desc": "Cloud pricing factors, risk mitigation strategies, compliance implementation.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2293,7 +2293,7 @@
                 "desc": "Cloud costs, licensing models, contract negotiation strategies.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               },
@@ -2303,7 +2303,7 @@
                 "desc": "Cloud SLAs, POC creation, cloud adoption planning untuk business value.",
                 "duration": "1 jam",
                 "badges": [
-                  "FREE",
+                  "FREE ",
                   "Intermediate"
                 ]
               }
@@ -2323,70 +2323,70 @@
             "title": "Google Cloud Labs",
             "sub": "Free tier $300 · 90 hari · Console + CLI",
             "list": [
-              "FREESetup GCP account + billing alert",
-              "GCPDeploy VM pakai Compute Engine",
-              "GCPBuat Cloud Storage bucket + upload file",
-              "GCPDeploy static site ke Cloud Storage + CDN",
-              "GCPBuat GKE cluster + deploy container",
-              "GCPSetup IAM roles + service account",
-              "GCPCloud Run: deploy Python Flask app",
-              "GCPCloud Monitoring + alerting policy"
+              "FREE Setup GCP account + billing alert",
+              "GCP Deploy VM pakai Compute Engine",
+              "GCP Buat Cloud Storage bucket + upload file",
+              "GCP Deploy static site ke Cloud Storage + CDN",
+              "GCP Buat GKE cluster + deploy container",
+              "GCP Setup IAM roles + service account",
+              "GCP Cloud Run: deploy Python Flask app",
+              "GCP Cloud Monitoring + alerting policy"
             ]
           },
           {
             "title": "AWS Labs",
             "sub": "Free tier 12 bulan · AWS Console + CLI",
             "list": [
-              "FREESetup AWS account + billing alarm",
-              "AWSLaunch EC2 instance + SSH masuk",
-              "AWSS3 bucket + static website hosting",
-              "AWSLambda function + API Gateway",
-              "AWSRDS setup + connect dari EC2",
-              "AWSIAM user + policy + MFA",
-              "AWSCloudFormation: deploy stack dari template",
-              "AWSECS + Fargate: deploy Docker container"
+              "FREE Setup AWS account + billing alarm",
+              "AWS Launch EC2 instance + SSH masuk",
+              "AWS S3 bucket + static website hosting",
+              "AWS Lambda function + API Gateway",
+              "AWS RDS setup + connect dari EC2",
+              "AWS IAM user + policy + MFA",
+              "AWS CloudFormation: deploy stack dari template",
+              "AWS ECS + Fargate: deploy Docker container"
             ]
           },
           {
             "title": "Azure Labs",
             "sub": "Free $200 kredit 30 hari · Portal + CLI",
             "list": [
-              "FREESetup Azure account + resource group",
-              "AZUREDeploy Linux VM + SSH",
-              "AZUREAzure Blob Storage + static website",
-              "AZUREAzure App Service: deploy web app",
-              "AZUREAzure Functions: serverless trigger",
-              "AZUREAzure AD: setup user + role assignment",
-              "AZUREAKS: deploy Kubernetes cluster",
-              "AZUREAzure Monitor + Log Analytics"
+              "FREE Setup Azure account + resource group",
+              "AZURE Deploy Linux VM + SSH",
+              "AZURE Azure Blob Storage + static website",
+              "AZURE Azure App Service: deploy web app",
+              "AZURE Azure Functions: serverless trigger",
+              "AZURE Azure AD: setup user + role assignment",
+              "AZURE AKS: deploy Kubernetes cluster",
+              "AZURE Azure Monitor + Log Analytics"
             ]
           },
           {
             "title": "Kubernetes Labs",
             "sub": "Minikube lokal + Play with K8s (free)",
             "list": [
-              "FREEInstall Minikube + kubectl di lokal",
-              "K8SDeploy pod + service + expose endpoint",
-              "K8SDeployment + ReplicaSet + rolling update",
-              "K8SConfigMap + Secret management",
-              "K8SPersistent Volume + PVC",
-              "K8SIngress controller + domain routing",
-              "K8SHPA: horizontal pod autoscaler",
-              "K8SNamespace + RBAC setup"
+              "FREE Install Minikube + kubectl di lokal",
+              "K8S Deploy pod + service + expose endpoint",
+              "K8S Deployment + ReplicaSet + rolling update",
+              "K8S ConfigMap + Secret management",
+              "K8S Persistent Volume + PVC",
+              "K8S Ingress controller + domain routing",
+              "K8S HPA: horizontal pod autoscaler",
+              "K8S Namespace + RBAC setup"
             ]
           },
           {
             "title": "Tools & DevOps Wajib",
             "sub": "Kuasai ini dulu sebelum apply kerja",
             "list": [
-              "FREEGit + GitHub: branching, PR, merge",
-              "FREEDocker: build image + push ke registry",
-              "FREETerraform: IaC buat GCP/AWS resource",
-              "FREEGitHub Actions: CI/CD pipeline sederhana",
-              "FREELinux CLI: ss, netstat, top, df, journalctl",
-              "FREEPython: boto3 (AWS) / google-cloud SDK",
-              "FREENginx / Caddy: reverse proxy setup",
-              "FREEPrometheus + Grafana: monitoring stack"
+              "FREE Git + GitHub: branching, PR, merge",
+              "FREE Docker: build image + push ke registry",
+              "FREE Terraform: IaC buat GCP/AWS resource",
+              "FREE GitHub Actions: CI/CD pipeline sederhana",
+              "FREE Linux CLI: ss, netstat, top, df, journalctl",
+              "FREE Python: boto3 (AWS) / google-cloud SDK",
+              "FREE Nginx / Caddy: reverse proxy setup",
+              "FREE Prometheus + Grafana: monitoring stack"
             ]
           },
           {
