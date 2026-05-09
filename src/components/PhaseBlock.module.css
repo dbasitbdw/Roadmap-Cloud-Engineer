@@ -1,0 +1,93 @@
+.block {
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.block:hover {
+  border-color: var(--border-color-hover);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface-color);
+}
+
+.numBadge {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: #F1F3F4;
+  color: var(--text-secondary);
+}
+
+/* Coloring per platform */
+.google .numBadge { background: var(--google-blue-light); color: var(--google-blue); border: 1px solid rgba(26,115,232,0.2); }
+.aws .numBadge { background: var(--aws-light); color: var(--aws-orange); border: 1px solid rgba(255,153,0,0.2); }
+.azure .numBadge { background: var(--azure-light); color: var(--azure-blue); border: 1px solid rgba(0,120,212,0.2); }
+.k8s .numBadge { background: var(--k8s-light); color: var(--k8s-blue); border: 1px solid rgba(50,108,229,0.2); }
+.multi .numBadge { background: var(--multi-light); color: var(--multi-purple); border: 1px solid rgba(161,66,244,0.2); }
+
+.headInfo {
+  flex: 1;
+}
+
+.headTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.headMeta {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Default tag styling based on text */
+.tag-free { background: var(--google-green-light); color: var(--google-green); border: 1px solid rgba(24,128,56,0.2); }
+.tag-paid { background: var(--google-yellow-light); color: #B38200; border: 1px solid rgba(249,171,0,0.2); }
+.tag-cert { background: var(--multi-light); color: var(--multi-purple); border: 1px solid rgba(161,66,244,0.2); }
+.tag-opsional { background: #F1F3F4; color: var(--text-secondary); border: 1px solid var(--border-color); }
+
+.arrow {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-left: 8px;
+  transition: transform 0.3s;
+}
+
+.body {
+  padding: 20px;
+  background: var(--bg-color); /* Light gray inside */
+  border-top: 1px solid var(--border-color);
+}

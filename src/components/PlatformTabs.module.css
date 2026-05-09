@@ -1,0 +1,52 @@
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeUp 0.6s 0.15s ease both;
+}
+
+.tab {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  background: var(--surface-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.tab:hover {
+  border-color: var(--border-color-hover);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.tab.active {
+  color: var(--text-primary);
+  border-color: currentColor;
+  box-shadow: none;
+}
+
+.tabGoogle.active { color: var(--google-blue); background: var(--google-blue-light); border-color: var(--google-blue); }
+.tabAws.active { color: var(--aws-orange); background: var(--aws-light); border-color: var(--aws-orange); }
+.tabAzure.active { color: var(--azure-blue); background: var(--azure-light); border-color: var(--azure-blue); }
+.tabK8s.active { color: var(--k8s-blue); background: var(--k8s-light); border-color: var(--k8s-blue); }
+.tabMulti.active { color: var(--multi-purple); background: var(--multi-light); border-color: var(--multi-purple); }
+.tabPraktik.active { color: var(--google-red); background: var(--google-red-light); border-color: var(--google-red); }
+
+@media (max-width: 768px) {
+  .tabs {
+    display: none;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

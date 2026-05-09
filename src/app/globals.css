@@ -1,0 +1,59 @@
+:root {
+  /* Google Cloud Light Theme Colors */
+  --bg-color: #F8F9FA;
+  --surface-color: #FFFFFF;
+  --text-primary: #202124;
+  --text-secondary: #5F6368;
+  --border-color: #DADCE0;
+  --border-color-hover: #BDC1C6;
+
+  /* Brand Accents */
+  --google-blue: #1A73E8;
+  --google-blue-light: #E8F0FE;
+  --google-red: #EA4335;
+  --google-red-light: #FCE8E6;
+  --google-yellow: #FBBC05;
+  --google-yellow-light: #FEF7E0;
+  --google-green: #34A853;
+  --google-green-light: #E6F4EA;
+
+  /* Platform specific colors based on original but lighter */
+  --aws-orange: #FF9900;
+  --aws-light: #FFF4E5;
+  --azure-blue: #0078D4;
+  --azure-light: #E5F1FB;
+  --k8s-blue: #326CE5;
+  --k8s-light: #EAF0FC;
+  --multi-purple: #A142F4;
+  --multi-light: #F3E5FD;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-bottom: 120px;
+  }
+}
