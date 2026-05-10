@@ -1,10 +1,14 @@
 .footer {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 40px 20px 24px;
   margin-top: 60px;
   border-top: 1px solid var(--border-color);
   font-size: 0.85rem;
   color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer a {
@@ -21,4 +25,39 @@
 
 .heart {
   color: var(--google-red);
+}
+
+.source {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+/* ── README button ─────────────────────────── */
+.readmeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s, background 0.18s, transform 0.18s;
+  margin-bottom: 4px;
+}
+
+.readmeBtn:hover {
+  color: var(--google-blue);
+  border-color: var(--google-blue);
+  background: var(--google-blue-light);
+  transform: translateY(-1px);
+}
+
+.readmeBtn:active {
+  transform: translateY(0);
 }

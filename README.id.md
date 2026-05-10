@@ -63,3 +63,6 @@ Anda diberikan hak penuh dan tanpa batasan untuk menggunakan, menyalin, mengubah
 
 ### ☁️ Lisensi Logo (Google Cloud)
 Logo **Google Cloud** yang digunakan sebagai favicon dan ikon proyek ini adalah merek dagang terdaftar milik **Google LLC**. Penggunaannya dalam proyek ini murni ditujukan untuk tujuan **edukasi, identifikasi, dan ilustrasi** tanpa klaim afiliasi resmi, sponsor, maupun dukungan langsung dari Google. Harap taati [Pedoman Merek Dagang Google](https://about.google/brand-resource-center/) apabila Anda berencana untuk mendistribusikan atau mengkomersialkan logo ini di luar penggunaan personal/edukasional.
+
+### 🎨 Kredit & Penggunaan Logo
+Logo dan Ikon lain yang digunakan dalam aplikasi web ini (termasuk AWS, Azure, Kubernetes, dll.) adalah merek dagang terdaftar dari pemiliknya masing-masing. Penggunaannya di sini murni hanya untuk **keperluan edukasi dan referensi pribadi** dengan penyertaan kredit yang sesuai, serta bukan untuk tujuan komersial.

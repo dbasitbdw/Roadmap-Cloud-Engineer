@@ -63,3 +63,6 @@ You are granted full and unrestricted rights to use, copy, modify, merge, publis
 
 ### ☁️ Logo License (Google Cloud)
 The **Google Cloud** logo used as the favicon and icon for this project is a registered trademark of **Google LLC**. Its use in this project is strictly for **educational, identification, and illustrative purposes** without any claim of official affiliation, sponsorship, or direct endorsement by Google. Please adhere to [Google's Trademark Guidelines](https://about.google/brand-resource-center/) if you plan to distribute or commercialize this logo beyond personal/educational use.
+
+### 🎨 Logo Credits & Usage
+The other Logos and Icons used in this web application (including AWS, Azure, Kubernetes, etc.) are the registered trademarks of their respective owners. They are used here solely for **educational and personal reference purposes** with appropriate credits, and not for commercial profit.
