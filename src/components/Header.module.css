@@ -65,6 +65,15 @@
   object-fit: contain;
 }
 
+.logoEmoji {
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logoCredit {
   font-size: 0.55rem;
   color: var(--text-secondary);

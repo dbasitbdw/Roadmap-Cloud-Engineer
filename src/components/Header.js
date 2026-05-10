@@ -2,17 +2,31 @@
 import { useLanguage } from "@/context/LanguageContext";
 import styles from './Header.module.css';
 
-export default function Header() {
+export default function Header({ activeTab }) {
   const { lang, changeLang, mounted } = useLanguage();
 
   if (!mounted) return null;
+
+  const getIconData = (tab) => {
+    switch(tab) {
+      case 'google': return { src: '/icon.svg', alt: 'Google Cloud Logo', credit: 'Logo © Google Cloud' };
+      case 'aws': return { src: '/aws.png', alt: 'AWS Logo', credit: 'Logo © Amazon Web Services' };
+      case 'azure': return { src: '/azure.png', alt: 'Azure Logo', credit: 'Logo © Microsoft Azure' };
+      case 'k8s': return { src: '/kubernet.png', alt: 'Kubernetes Logo', credit: 'Logo © Cloud Native Computing Foundation' };
+      case 'multi': return { emoji: '☁️', alt: 'Multi Cloud', credit: 'Multi-Cloud Architecture' };
+      case 'praktik': return { emoji: '💻', alt: 'Latihan Praktik', credit: 'Hands-on Practice' };
+      default: return { src: '/icon.svg', alt: 'Cloud Engineer Logo', credit: 'Logo © Google Cloud' };
+    }
+  };
+
+  const iconData = getIconData(activeTab);
 
   return (
     <header className={styles.header}>
       {/* Top Bar for Welcome Message and Language Switcher */}
       <div className={styles.topBar}>
         <div className={styles.welcomeMsg}>
-          Welcome everyone 👋
+          {lang === 'id' ? 'Selamat datang semuanya 👋' : 'Welcome everyone 👋'}
         </div>
         <div className={styles.langSwitch}>
           <button 
@@ -31,8 +45,12 @@ export default function Header() {
         </div>
       </div>
 
-      <img src="/icon.svg" alt="Cloud Engineer Logo" className={styles.logo} />
-      <span className={styles.logoCredit}>Logo © Google Cloud</span>
+      {iconData.src ? (
+        <img src={iconData.src} alt={iconData.alt} className={styles.logo} />
+      ) : (
+        <div className={styles.logoEmoji}>{iconData.emoji}</div>
+      )}
+      <span className={styles.logoCredit}>{iconData.credit}</span>
       <div className={styles.topTag}>CLOUD ENGINEER PATH</div>
       <h1 className={styles.title}>
         {lang === 'id' ? 'Roadmap Cloud Engineer' : 'Cloud Engineer Roadmap'}

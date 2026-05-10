@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main className="page">
-      <Header />
+      <Header activeTab={activeTab} />
       <PlatformTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       
       {platformsData.map((platform) => (
