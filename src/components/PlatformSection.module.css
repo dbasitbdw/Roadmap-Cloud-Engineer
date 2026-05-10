@@ -26,6 +26,12 @@
   background: #F1F3F4; /* Default generic light gray */
 }
 
+.platformImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
 .google .icon { background: var(--google-blue-light); color: var(--google-blue); }
 .aws .icon { background: var(--aws-light); color: var(--aws-orange); }
 .azure .icon { background: var(--azure-light); color: var(--azure-blue); }

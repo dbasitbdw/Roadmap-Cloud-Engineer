@@ -54,6 +54,6 @@ a {
 
 @media (max-width: 768px) {
   .page {
-    padding-bottom: 120px;
+    padding: 24px 20px 120px;
   }
 }

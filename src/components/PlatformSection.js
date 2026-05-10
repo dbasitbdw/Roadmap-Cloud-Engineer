@@ -8,11 +8,11 @@ export default function PlatformSection({ platform }) {
     <div className={styles.section}>
       <div className={`${styles.header} ${styles[platform.id] || ''}`}>
         <div className={styles.icon}>
-          {platform.id === 'google' && '☁️'}
-          {platform.id === 'aws' && '🟠'}
-          {platform.id === 'azure' && '🔵'}
-          {platform.id === 'k8s' && '⚙️'}
-          {platform.id === 'multi' && '🌐'}
+          {platform.id === 'google' && <img src="/icon.svg" alt="Google Cloud" className={styles.platformImg} />}
+          {platform.id === 'aws' && <img src="/aws.png" alt="AWS" className={styles.platformImg} />}
+          {platform.id === 'azure' && <img src="/azure.png" alt="Azure" className={styles.platformImg} />}
+          {platform.id === 'k8s' && <img src="/kubernet.png" alt="Kubernetes" className={styles.platformImg} />}
+          {platform.id === 'multi' && '☁️'}
         </div>
         <div className={styles.info}>
           <h2>{platform.title}</h2>
