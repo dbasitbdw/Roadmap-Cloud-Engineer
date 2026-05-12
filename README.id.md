@@ -51,7 +51,7 @@ npm install
 # 4. Jalankan development server
 npm run dev
 ```
-Buka `http://localhost:3001` di browser Anda!
+Buka `http://localhost:3000` di browser Anda!
 
 ---
 
